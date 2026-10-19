@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-//FLAVIO LADRAO//
 #define MAX_TUTORES 100
 #define MAX_ANIMAIS 100
 #define MAX_ATENDIMENTOS 100
