@@ -42,6 +42,14 @@ int totalAnimais = 0;
 struct Atendimento atendimentos[MAX_ATENDIMENTOS];   
 int totalAtendimentos = 0;
 
+void cadastrarTutor(void);
+void cadastrarAnimal(void);
+void listarCadastros(void);
+void buscarRegistro(void);
+void registrarAtendimento(void);
+void alterarCadastro(void);
+void relatorio(void);
+void mostrarServicos(void);
 
 
 
