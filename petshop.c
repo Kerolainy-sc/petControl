@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 #include <stdio.h>
 #include <string.h>
 
@@ -97,4 +95,3 @@ void registrarAtendimento(void) { printf("Registrar atendimento\n"); }
 void alterarCadastro(void)      { printf("Alterar tutor\n"); }
 void relatorio(void)            { printf("Relatorio\n"); }
 void mostrarServicos(void)      { printf("Ver servicos\n"); }
->>>>>>> 1ff5e682d47ddd31a9cf550b58dd39f3008e6a33
