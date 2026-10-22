@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 #include <stdio.h>
 #include <string.h>
 
@@ -14,7 +16,7 @@ struct Tutor {
     char email[50];
     char cpf[15];
 };
-//teste de comittt dessa bomba//
+
 struct Animal {
     char nome[50];
     char especie[20];
@@ -32,8 +34,6 @@ struct Atendimento {
     char animalNome[50];
     float valor;
 };
-
-//VARIAVEIS GLOBAIS//
 
 struct Tutor tutores[MAX_TUTORES];
 int totalTutores = 0;
@@ -88,7 +88,7 @@ int main(void) {
     return 0;
 }
 
-// IMPLEMENTAÇÃO DAS FUNÇÕES
+
 void cadastrarTutor(void)       { printf("Cadastrar tutor\n"); }
 void cadastrarAnimal(void)      { printf("Cadastrar animal\n"); }
 void listarCadastros(void)      { printf("Listar cadastros\n"); }
@@ -97,3 +97,4 @@ void registrarAtendimento(void) { printf("Registrar atendimento\n"); }
 void alterarCadastro(void)      { printf("Alterar tutor\n"); }
 void relatorio(void)            { printf("Relatorio\n"); }
 void mostrarServicos(void)      { printf("Ver servicos\n"); }
+>>>>>>> 1ff5e682d47ddd31a9cf550b58dd39f3008e6a33
