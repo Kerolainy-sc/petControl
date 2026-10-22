@@ -1,44 +1,133 @@
 #include <stdio.h>
 #include <string.h>
-#define MAX_TUTORES 10
-#define MAX_ANIMAIS 10
-#define MAX_ATENDIMENTOS 10
 
+#define MAX 10
 
-struct Tutor {
+typedef struct {
+    int codigo;
     char nome[50];
-    char telefone[15];
-    char endereco[100];
-    char email[50];
-    char cpf[15];
-};
+    char telefone[20];
+} Tutor;
 
-struct Animal {
+typedef struct {
+    int codigo;
     char nome[50];
-    char especie[20];
-    char raca[20];
+    char especie[30];
     int idade;
-    float peso;
-    char tutorCpf[15];
+    int codigoTutor;
+} Animal;
+
+typedef struct {
+    int codigoAnimal;
+    int servico;
+    int quantidade;
+    float total;
+} Atendimento;
+
+int qntTutores = 0;
+int qntAnimais = 0;
+int qntAtendimentos = 0;
+
+char servicos[4][30] = {
+    "Banho", "Tosa", "Consulta veterinaria", "Vacinacao"
 };
 
-struct Atendimento {
-    char hora[6];
-    char servico[50];
-    char tutorCpf[15];
-    char animalNome[50];
-    float valor;
-};
+float precos[4] = {35.0, 45.0, 80.0, 60.0};
 
-struct Tutor tutores[MAX_TUTORES];
-int totalTutores = 0;
-struct Animal animais[MAX_ANIMAIS];
-int totalAnimais = 0;
-struct Atendimento atendimentos[MAX_ATENDIMENTOS];
-int totalAtendimentos = 0;
+/* Busca um tutor pelo codigo. Retorna a posicao ou -1. */
+int buscarTutor(int codigo) {
+    int i;
+    for (i = 0; i < qtdTutores; i++) {
+        if (tutores[i].codigo == codigo) {
+            return i;
+        }
+    }
+    return -1;
+}
 
-void cadastrarTutor();
-void cadastrarAnimal();
+/* Busca um animal pelo codigo. Retorna a posicao ou -1. */
+int buscarAnimal(int codigo) {
+    int i;
+    for (i = 0; i < qtdAnimais; i++) {
+        if (animais[i].codigo == codigo) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+void cadastrarTutor(void){
+    Tutor novo;
+
+    if (qtdTutores == MAX) {
+        printf("Limite de tutores atingido.\n");
+        return;
+    }
+
+    printf("Codigo do tutor: ");
+    scanf("%d", &novo.codigo);
+
+    if (novo.codigo <= 0 || buscarTutor(novo.codigo) != -1) {
+        printf("Codigo invalido ou ja cadastrado.\n");
+        return;
+    }
+
+    printf("Nome completo: ");
+    fgets(novo.nome,50,stdin);
+    novo.nome[strcspn(novo.nome, "\n")] = '\0';
+
+    printf("Telefone: ");
+    fgets(novo.telefone,50,stdin);
+    novo.telefone[strcspn(novo.telefone, "\n")] = '\0';
+    
+    tutores[qtdTutores] = novo;
+    qtdTutores++;
+    printf("Tutor cadastrado!\n");
+}
+
+void cadastrarAnimal(void){
+    Animal novo;
+
+    if (qtdAnimais == MAX) {
+        printf("Limite de animais atingido.\n");
+        return;
+    }
+
+    printf("Codigo do animal: ");
+    scanf("%d", &novo.codigo);
+
+    if (novo.codigo <= 0 || buscarAnimal(novo.codigo) != -1) {
+        printf("Codigo invalido ou ja cadastrado.\n");
+        return;
+    }
+
+    printf("Nome do animal: ");
+    scanf(" %49[^\n]", novo.nome);
+
+    printf("Especie: ");
+    scanf(" %29[^\n]", novo.especie);
+
+    printf("Idade: ");
+    scanf("%d", &novo.idade);
+
+    if (novo.idade < 0 || novo.idade > 100) {
+        printf("Idade invalida. Cadastro cancelado.\n");
+        return;
+    }
+
+    printf("Codigo do tutor responsavel: ");
+    scanf("%d", &novo.codigoTutor);
+
+    if (buscarTutor(novo.codigoTutor) == -1) {
+        printf("Tutor nao encontrado. Cadastre o tutor primeiro.\n");
+        return;
+    }
+
+    animais[qtdAnimais] = novo;
+    qtdAnimais++;
+    printf("Animal cadastrado!\n");
+}
+
 void listarCadastros();
 void buscarRegistro();
 void registrarAtendimento();
@@ -83,7 +172,7 @@ int main(void) {
     return 0;
 }
 
-void cadastrarTutor() {
+/*void cadastrarTutor() {
     if (totalTutores >= MAX_TUTORES) {
         printf("Limite de tutores atingido.\n");
         return;
@@ -250,5 +339,6 @@ void mostrarServicos() {
     printf("11 - taxi dog\n");
     printf("-----------------------------\n");
  // ME MATEI PRA ENTENDER E FAZER ESSA BOMBAAAAAAAAAAAAAAAA, MAS NAO SEI S ETA CERTINHO MESMO, MAS TA FUNCIONANDO, SE DER MERDA, ME MATA
+ //Vamos usar as funções la encima para não dar erro, já que elas foi chamadas no switch!
 
-}
+}*/
