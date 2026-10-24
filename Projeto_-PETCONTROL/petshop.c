@@ -24,48 +24,78 @@ typedef struct {
     float total;
 } Atendimento;
 
-int qntTutores = 0;
-int qntAnimais = 0;
-int qntAtendimentos = 0;
+Tutor tutores[MAX];
+Animal animais[MAX];
+Atendimento atendimentos[MAX];
+
+int qtdTutores = 0;
+int qtdAnimais = 0;
+int qtdAtendimentos = 0;
 
 char servicos[4][30] = {
-    "Banho", "Tosa", "Consulta veterinaria", "Vacinacao"
+    "Banho",
+    "Tosa",
+    "Consulta veterinaria",
+    "Vacinacao"
 };
 
 float precos[4] = {35.0, 45.0, 80.0, 60.0};
 
-/* Busca um tutor pelo codigo. Retorna a posicao ou -1. */
+void limparEntrada(void) {
+    int c;
+
+    while ((c = getchar()) != '\n' && c != EOF) {
+    }
+}
+
+void lerTexto(char texto[], int tamanho) {
+    if (fgets(texto, tamanho, stdin) != NULL) {
+        texto[strcspn(texto, "\n")] = '\0';
+    }
+}
+
 int buscarTutor(int codigo) {
     int i;
+
     for (i = 0; i < qtdTutores; i++) {
         if (tutores[i].codigo == codigo) {
             return i;
         }
     }
+
     return -1;
 }
 
-/* Busca um animal pelo codigo. Retorna a posicao ou -1. */
 int buscarAnimal(int codigo) {
     int i;
+
     for (i = 0; i < qtdAnimais; i++) {
         if (animais[i].codigo == codigo) {
             return i;
         }
     }
+
     return -1;
 }
 
-void cadastrarTutor(void){
+void cadastrarTutor(void) {
     Tutor novo;
 
-    if (qtdTutores == MAX) {
+    if (qtdTutores >= MAX) {
         printf("Limite de tutores atingido.\n");
         return;
     }
 
+    printf("\n--- CADASTRO DE TUTOR ---\n");
     printf("Codigo do tutor: ");
-    scanf("%d", &novo.codigo);
+
+    if (scanf("%d", &novo.codigo) != 1) {
+        printf("Codigo invalido.\n");
+        limparEntrada();
+        return;
+    }
+
+    limparEntrada();
 
     if (novo.codigo <= 0 || buscarTutor(novo.codigo) != -1) {
         printf("Codigo invalido ou ja cadastrado.\n");
@@ -73,28 +103,35 @@ void cadastrarTutor(void){
     }
 
     printf("Nome completo: ");
-    fgets(novo.nome,50,stdin);
-    novo.nome[strcspn(novo.nome, "\n")] = '\0';
+    lerTexto(novo.nome, sizeof(novo.nome));
 
     printf("Telefone: ");
-    fgets(novo.telefone,50,stdin);
-    novo.telefone[strcspn(novo.telefone, "\n")] = '\0';
-    
+    lerTexto(novo.telefone, sizeof(novo.telefone));
+
     tutores[qtdTutores] = novo;
     qtdTutores++;
-    printf("Tutor cadastrado!\n");
+
+    printf("Tutor cadastrado com sucesso!\n");
 }
 
-void cadastrarAnimal(void){
+void cadastrarAnimal(void) {
     Animal novo;
 
-    if (qtdAnimais == MAX) {
+    if (qtdAnimais >= MAX) {
         printf("Limite de animais atingido.\n");
         return;
     }
 
+    printf("\n--- CADASTRO DE ANIMAL ---\n");
     printf("Codigo do animal: ");
-    scanf("%d", &novo.codigo);
+
+    if (scanf("%d", &novo.codigo) != 1) {
+        printf("Codigo invalido.\n");
+        limparEntrada();
+        return;
+    }
+
+    limparEntrada();
 
     if (novo.codigo <= 0 || buscarAnimal(novo.codigo) != -1) {
         printf("Codigo invalido ou ja cadastrado.\n");
@@ -102,21 +139,35 @@ void cadastrarAnimal(void){
     }
 
     printf("Nome do animal: ");
-    scanf(" %49[^\n]", novo.nome);
+    lerTexto(novo.nome, sizeof(novo.nome));
 
     printf("Especie: ");
-    scanf(" %29[^\n]", novo.especie);
+    lerTexto(novo.especie, sizeof(novo.especie));
 
     printf("Idade: ");
-    scanf("%d", &novo.idade);
+
+    if (scanf("%d", &novo.idade) != 1) {
+        printf("Idade invalida.\n");
+        limparEntrada();
+        return;
+    }
+
+    limparEntrada();
 
     if (novo.idade < 0 || novo.idade > 100) {
-        printf("Idade invalida. Cadastro cancelado.\n");
+        printf("Idade invalida.\n");
         return;
     }
 
     printf("Codigo do tutor responsavel: ");
-    scanf("%d", &novo.codigoTutor);
+
+    if (scanf("%d", &novo.codigoTutor) != 1) {
+        printf("Codigo invalido.\n");
+        limparEntrada();
+        return;
+    }
+
+    limparEntrada();
 
     if (buscarTutor(novo.codigoTutor) == -1) {
         printf("Tutor nao encontrado. Cadastre o tutor primeiro.\n");
@@ -125,23 +176,250 @@ void cadastrarAnimal(void){
 
     animais[qtdAnimais] = novo;
     qtdAnimais++;
-    printf("Animal cadastrado!\n");
+
+    printf("Animal cadastrado com sucesso!\n");
 }
 
-void listarCadastros();
-void buscarRegistro();
-void registrarAtendimento();
-void alterarCadastro();
-void relatorio();
-void mostrarServicos();
-void lerTexto(char destino[], int tamanho);
+void listarCadastros(void) {
+    int i;
+
+    printf("\n--- TUTORES CADASTRADOS ---\n");
+
+    if (qtdTutores == 0) {
+        printf("Nenhum tutor cadastrado.\n");
+    }
+
+    for (i = 0; i < qtdTutores; i++) {
+        printf("Codigo: %d | Nome: %s | Telefone: %s\n",
+               tutores[i].codigo,
+               tutores[i].nome,
+               tutores[i].telefone);
+    }
+
+    printf("\n--- ANIMAIS CADASTRADOS ---\n");
+
+    if (qtdAnimais == 0) {
+        printf("Nenhum animal cadastrado.\n");
+    }
+
+    for (i = 0; i < qtdAnimais; i++) {
+        printf("Codigo: %d | Nome: %s | Especie: %s | Idade: %d | Tutor: %d\n",
+               animais[i].codigo,
+               animais[i].nome,
+               animais[i].especie,
+               animais[i].idade,
+               animais[i].codigoTutor);
+    }
+}
+
+void buscarRegistro(void) {
+    int tipo, codigo, posicao;
+
+    printf("\n1 - Buscar tutor\n");
+    printf("2 - Buscar animal\n");
+    printf("Escolha: ");
+
+    if (scanf("%d", &tipo) != 1) {
+        printf("Opcao invalida.\n");
+        limparEntrada();
+        return;
+    }
+
+    limparEntrada();
+
+    printf("Digite o codigo: ");
+
+    if (scanf("%d", &codigo) != 1) {
+        printf("Codigo invalido.\n");
+        limparEntrada();
+        return;
+    }
+
+    limparEntrada();
+
+    if (tipo == 1) {
+        posicao = buscarTutor(codigo);
+
+        if (posicao == -1) {
+            printf("Tutor nao encontrado.\n");
+        } else {
+            printf("Codigo: %d | Nome: %s | Telefone: %s\n",
+                   tutores[posicao].codigo,
+                   tutores[posicao].nome,
+                   tutores[posicao].telefone);
+        }
+    } else if (tipo == 2) {
+        posicao = buscarAnimal(codigo);
+
+        if (posicao == -1) {
+            printf("Animal nao encontrado.\n");
+        } else {
+            printf("Codigo: %d | Nome: %s | Especie: %s | Idade: %d\n",
+                   animais[posicao].codigo,
+                   animais[posicao].nome,
+                   animais[posicao].especie,
+                   animais[posicao].idade);
+        }
+    } else {
+        printf("Opcao invalida.\n");
+    }
+}
+
+void mostrarServicos(void) {
+    int i;
+
+    printf("\n--- SERVICOS DISPONIVEIS ---\n");
+
+    for (i = 0; i < 4; i++) {
+        printf("%d - %s: R$ %.2f\n",
+               i + 1, servicos[i], precos[i]);
+    }
+}
+
+void registrarAtendimento(void) {
+    Atendimento novo;
+    int posicao;
+
+    if (qtdAtendimentos >= MAX) {
+        printf("Limite de atendimentos atingido.\n");
+        return;
+    }
+
+    printf("\n--- REGISTRAR ATENDIMENTO ---\n");
+    printf("Codigo do animal: ");
+
+    if (scanf("%d", &novo.codigoAnimal) != 1) {
+        printf("Codigo invalido.\n");
+        limparEntrada();
+        return;
+    }
+
+    limparEntrada();
+
+    posicao = buscarAnimal(novo.codigoAnimal);
+
+    if (posicao == -1) {
+        printf("Animal nao encontrado.\n");
+        return;
+    }
+
+    mostrarServicos();
+
+    printf("Escolha o servico (1 a 4): ");
+
+    if (scanf("%d", &novo.servico) != 1) {
+        printf("Servico invalido.\n");
+        limparEntrada();
+        return;
+    }
+
+    limparEntrada();
+
+    if (novo.servico < 1 || novo.servico > 4) {
+        printf("Servico invalido.\n");
+        return;
+    }
+
+    novo.quantidade = 1;
+
+    if (novo.servico == 1 || novo.servico == 2) {
+        printf("Quantidade: ");
+
+        if (scanf("%d", &novo.quantidade) != 1) {
+            printf("Quantidade invalida.\n");
+            limparEntrada();
+            return;
+        }
+
+        limparEntrada();
+
+        if (novo.quantidade < 1) {
+            printf("Quantidade invalida.\n");
+            return;
+        }
+    }
+
+    novo.total = precos[novo.servico - 1] * novo.quantidade;
+
+    atendimentos[qtdAtendimentos] = novo;
+    qtdAtendimentos++;
+
+    printf("Atendimento registrado para %s.\n",
+           animais[posicao].nome);
+
+    printf("Total: R$ %.2f\n", novo.total);
+}
+
+void alterarTutor(Tutor *tutor) {
+    printf("Novo nome: ");
+    lerTexto(tutor->nome, sizeof(tutor->nome));
+
+    printf("Novo telefone: ");
+    lerTexto(tutor->telefone, sizeof(tutor->telefone));
+
+    printf("Cadastro alterado com sucesso!\n");
+}
+
+void alterarCadastro(void) {
+    int codigo, posicao;
+
+    printf("Codigo do tutor que deseja alterar: ");
+
+    if (scanf("%d", &codigo) != 1) {
+        printf("Codigo invalido.\n");
+        limparEntrada();
+        return;
+    }
+
+    limparEntrada();
+
+    posicao = buscarTutor(codigo);
+
+    if (posicao == -1) {
+        printf("Tutor nao encontrado.\n");
+    } else {
+        alterarTutor(&tutores[posicao]);
+    }
+}
+
+void relatorio(void) {
+    int i;
+    int servico;
+    int maisUsado = 0;
+    int quantidade[4] = {0, 0, 0, 0};
+    float faturamento = 0.0;
+
+    for (i = 0; i < qtdAtendimentos; i++) {
+        servico = atendimentos[i].servico - 1;
+
+        quantidade[servico]++;
+        faturamento += atendimentos[i].total;
+    }
+
+    printf("\n--- RELATORIO DA SESSAO ---\n");
+    printf("Atendimentos registrados: %d\n", qtdAtendimentos);
+    printf("Faturamento total: R$ %.2f\n", faturamento);
+
+    if (qtdAtendimentos == 0) {
+        printf("Nenhum atendimento registrado ainda.\n");
+        return;
+    }
+
+    for (i = 1; i < 4; i++) {
+        if (quantidade[i] > quantidade[maisUsado]) {
+            maisUsado = i;
+        }
+    }
+
+    printf("Servico mais utilizado: %s\n",
+           servicos[maisUsado]);
+}
 
 int main(void) {
-
     int opcao;
 
     do {
-        printf("\n===== PETSHOP ;)=====\n");
+        printf("\n===== PETCONTROL =====\n");
         printf("1 - Cadastrar tutor\n");
         printf("2 - Cadastrar animal\n");
         printf("3 - Listar cadastros\n");
@@ -152,26 +430,61 @@ int main(void) {
         printf("8 - Ver servicos\n");
         printf("0 - Sair\n");
         printf("Escolha: ");
-        scanf("%d", &opcao);
-    getchar();   
+
+        if (scanf("%d", &opcao) != 1) {
+            printf("Digite uma opcao numerica.\n");
+            limparEntrada();
+            opcao = -1;
+            continue;
+        }
+
+        limparEntrada();
 
         switch (opcao) {
-            case 1: cadastrarTutor(); break;
-            case 2: cadastrarAnimal(); break;
-            case 3: listarCadastros(); break;
-            case 4: buscarRegistro(); break;
-            case 5: registrarAtendimento(); break;
-            case 6: alterarCadastro(); break;
-            case 7: relatorio(); break;
-            case 8: mostrarServicos(); break;
-            case 0: printf("Sistema encerrado.\n"); break;
-            default: printf("Opcao invalida. Tente novamente.\n");
+            case 1:
+                cadastrarTutor();
+                break;
+
+            case 2:
+                cadastrarAnimal();
+                break;
+
+            case 3:
+                listarCadastros();
+                break;
+
+            case 4:
+                buscarRegistro();
+                break;
+
+            case 5:
+                registrarAtendimento();
+                break;
+
+            case 6:
+                alterarCadastro();
+                break;
+
+            case 7:
+                relatorio();
+                break;
+
+            case 8:
+                mostrarServicos();
+                break;
+
+            case 0:
+                printf("Sistema encerrado.\n");
+                break;
+
+            default:
+                printf("Opcao invalida. Tente novamente.\n");
         }
+
     } while (opcao != 0);
 
     return 0;
 }
-
 /*void cadastrarTutor() {
     if (totalTutores >= MAX_TUTORES) {
         printf("Limite de tutores atingido.\n");
