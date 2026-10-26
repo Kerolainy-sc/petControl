@@ -9,6 +9,7 @@ typedef struct {
     char telefone[20];
 } Tutor;
 
+
 typedef struct {
     int codigo;
     char nome[50];
@@ -32,7 +33,7 @@ char servicos[4][30] = {
     "Banho", "Tosa", "Consulta veterinaria", "Vacinacao"
 };
 
-// Vetores adicionados para servir como banco de dados do sistema
+// Vetores adicionados para servir como banco de dados do sistema, por isso tava dando erro de "variavel nao declarada" no main.
 Tutor tutores[MAX];
 Animal animais[MAX];
 Atendimento atendimentos[MAX];
@@ -106,14 +107,13 @@ void cadastrarAnimal(void){
         printf("Codigo invalido ou ja cadastrado.\n");
         return;
     }
-
+// Não sei pq deu erro no % //
     printf("Nome do animal: ");
     scanf("%49[^\n]", novo.nome); 
-    fflush(stdin); // CORREÇÃO: Limpa de forma absoluta qualquer resíduo ou 'Enter' do teclado no Windows
+    
 
     printf("Especie: ");
     scanf("%29[^\n]", novo.especie);
-    fflush(stdin); // CORREÇÃO: Garante que o buffer está limpo para ler a idade na linha seguinte
 
 
 
@@ -231,7 +231,7 @@ void lerTexto(char destino[], int tamanho) {
     // Mantida apenas para evitar problemas com o bloco comentado abaixo
 }
 
-//* =========================================================================
+/* =========================================================================
    //CORREÇÃO: Alterado para '/*' para abrir corretamente o bloco isolado
    =========================================================================
 
