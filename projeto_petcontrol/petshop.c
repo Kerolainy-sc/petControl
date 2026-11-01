@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 #define MAX 10
@@ -62,7 +63,20 @@ int buscarAnimal(int codigo) {
     return -1;
 }
 
-void cadastrarTutor(void){
+/* Le uma linha de texto e remove o \n do final. */
+void lerTexto(char destino[], int tamanho) {
+    fgets(destino, tamanho, stdin);
+    destino[strcspn(destino, "\n")] = '\0';
+}
+
+/* Le uma linha e converte para inteiro (nao deixa lixo no buffer). */
+int lerInt(void) {
+    char buf[30];
+    fgets(buf, sizeof(buf), stdin);
+    return atoi(buf);
+}
+
+void cadastrarTutor(void) {
     Tutor novo;
 
     if (qntTutores == MAX) {
@@ -70,29 +84,21 @@ void cadastrarTutor(void){
         return;
     }
 
-    printf("Codigo do tutor: ");
-    scanf("%d", &novo.codigo);
-    getchar(); // CORREÇÃO: Lmpa o buffer do número. Tava dando erro ;()
-
-    if (novo.codigo <= 0 || buscarTutor(novo.codigo) != -1) {
-        printf("Codigo invalido ou ja cadastrado.\n");
-        return;
-    }
+    novo.codigo = qntTutores + 1;
+    printf("Codigo do tutor (gerado automaticamente): %d\n", novo.codigo);
 
     printf("Nome completo: ");
-    fgets(novo.nome, 50, stdin);
-    novo.nome[strcspn(novo.nome, "\n")] = '\0';
+    lerTexto(novo.nome, 50);
 
     printf("Telefone: ");
-    fgets(novo.telefone, 20, stdin); // AJUSTE: Ajustado tamanho para 20 para bater com a struct Tutor. Isso foi o gemini girls
-    novo.telefone[strcspn(novo.telefone, "\n")] = '\0';
-    
+    lerTexto(novo.telefone, 20);
+
     tutores[qntTutores] = novo;
     qntTutores++;
-    printf("Tutor cadastrado!\n");
+    printf("Tutor cadastrado! SEU CODIGO E: %d\n", novo.codigo);
 }
 
-void cadastrarAnimal(void){
+void cadastrarAnimal(void) {
     Animal novo;
 
     if (qntAnimais == MAX) {
@@ -100,55 +106,44 @@ void cadastrarAnimal(void){
         return;
     }
 
-    printf("Codigo do animal: ");
-    scanf("%d", &novo.codigo);
+    novo.codigo = qntAnimais + 1;
+    printf("Codigo do animal (gerado automaticamente): %d\n", novo.codigo);
 
-    if (novo.codigo <= 0 || buscarAnimal(novo.codigo) != -1) {
-        printf("Codigo invalido ou ja cadastrado.\n");
-        return;
-    }
-// Não sei pq deu erro no % //
+    //Claudinho pedio pra trocar por fgets//
+
     printf("Nome do animal: ");
-    scanf("%49[^\n]", novo.nome); 
-    
+    lerTexto(novo.nome, 50);
 
     printf("Especie: ");
-    scanf("%29[^\n]", novo.especie);
-
-
+    lerTexto(novo.especie, 30);
 
     printf("Idade: ");
-    scanf("%d", &novo.idade);
-    getchar(); // CORREÇÃO: Limpa o buffer do número antes de ler o próximo código.
-
+    novo.idade = lerInt();
     if (novo.idade < 0 || novo.idade > 100) {
         printf("Idade invalida. Cadastro cancelado.\n");
         return;
     }
 
     printf("Codigo do tutor responsavel: ");
-    scanf("%d", &novo.codigoTutor);
-    getchar(); // CORREÇÃO: Limpa o buffer após o número para não quebrar o menu principal.
-
+    novo.codigoTutor = lerInt();
     if (buscarTutor(novo.codigoTutor) == -1) {
         printf("Tutor nao encontrado. Cadastre o tutor primeiro.\n");
         return;
     }
 
-    // CORREÇÃO: Nome da variável alterado de 'qtdAnimais' para 'qntAnimais' (com n) para rodar correto.
     animais[qntAnimais] = novo;
     qntAnimais++;
-    printf("Animal cadastrado!\n");
+    printf("Animal cadastrado! CODIGO: %d\n", novo.codigo);
 }
 
 // Protótipos das funções auxiliares e do menu
+
 void listarCadastros();
 void buscarRegistro();
 void registrarAtendimento();
 void alterarCadastro();
 void relatorio();
 void mostrarServicos();
-void lerTexto(char destino[], int tamanho);
 
 int main(void) {
     int opcao;
@@ -165,8 +160,7 @@ int main(void) {
         printf("8 - Ver servicos\n");
         printf("0 - Sair\n");
         printf("Escolha: ");
-        scanf("%d", &opcao);
-        getchar();   
+        opcao = lerInt();
 
         switch (opcao) {
             case 1: cadastrarTutor(); break;
@@ -187,7 +181,7 @@ int main(void) {
 
 // =========================================================================
 // CORREÇÃO: Escoramento das funções do menu para o compilador não quebrar.
-// =========================================================================
+
 
 void listarCadastros() {
     printf("\n------ LISTA DE TUTORES ------\n");
@@ -225,10 +219,6 @@ void mostrarServicos() {
     for (int i = 0; i < 4; i++) {
         printf("%d - %s: R$ %.2f\n", i + 1, servicos[i], precos[i]);
     }
-}
-
-void lerTexto(char destino[], int tamanho) {
-    // Mantida apenas para evitar problemas com o bloco comentado abaixo
 }
 
 /* =========================================================================
@@ -340,3 +330,4 @@ void registrarAtendimento() {
     printf("Digite o servico realizado: ");
 
 }
+*/
