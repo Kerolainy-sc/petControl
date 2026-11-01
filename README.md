@@ -4,15 +4,13 @@
 
 Sistema de terminal em linguagem C para gerenciar um pet shop e clínica veterinária fictícios. Projeto da avaliação final de Lógica de Programação em C (UCB).
 
-⏔⏔⏔⏔⏔⏔ ꒰ ᧔ෆ᧓ ꒱ ⏔⏔⏔⏔⏔⏔
-
 Sobre o projeto:
 O Pet Friends registra tutores e seus bichinhos, organiza os serviços do pet shop, calcula valores dos atendimentos e mostra um relatório da sessão. 
 Os dados ficam guardados só enquanto o programa está aberto.
 
-A estética é inspirada no universo de Hello Kitty (Sanrio) e Line Friends (LINE).
+⏔⏔⏔⏔⏔⏔ ꒰ ᧔ෆ᧓ ꒱ ⏔⏔⏔⏔⏔⏔
 
- Funcionalidades:   ૮₍ ˃ ⤙ ˂ ₎ა
+ Funcionalidades:  
 
  -Cadastro de tutores (código gerado automaticamente)
  -Cadastro de animais, ligados a um tutor que já existe
