@@ -199,19 +199,138 @@ void listarCadastros() {
 }
 
 void buscarRegistro() {
-    printf("Funcao de buscar registro em desenvolvimento...\n");
+    int tipo, codigo, pos;
+
+    printf("1 - Buscar tutor\n");
+    printf("2 - Buscar animal\n");
+    printf("Escolha: ");
+    tipo = lerInt();
+
+    printf("Digite o codigo: ");
+    codigo = lerInt();
+
+    if (tipo == 1) {
+        pos = buscarTutor(codigo);
+
+        if (pos == -1) {
+            printf("Tutor nao encontrado.\n");
+        } else {
+            printf("Codigo: %d\n", tutores[pos].codigo);
+            printf("Nome: %s\n", tutores[pos].nome);
+            printf("Telefone: %s\n", tutores[pos].telefone);
+        }
+    } else if (tipo == 2) {
+        pos = buscarAnimal(codigo);
+
+        if (pos == -1) {
+            printf("Animal nao encontrado.\n");
+        } else {
+            printf("Codigo: %d\n", animais[pos].codigo);
+            printf("Nome: %s\n", animais[pos].nome);
+            printf("Especie: %s\n", animais[pos].especie);
+            printf("Idade: %d\n", animais[pos].idade);
+            printf("Codigo do tutor: %d\n", animais[pos].codigoTutor);
+        }
+    } else {
+        printf("Opcao invalida.\n");
+    }
 }
 
 void registrarAtendimento() {
-    printf("Funcao de registrar atendimento em desenvolvimento...\n");
+    Atendimento novo;
+    int pos;
+
+    if (qntAtendimentos == MAX) {
+        printf("Limite de atendimentos atingido.\n");
+        return;
+    }
+
+    printf("Codigo do animal: ");
+    novo.codigoAnimal = lerInt();
+
+    pos = buscarAnimal(novo.codigoAnimal);
+    if (pos == -1) {
+        printf("Animal nao encontrado.\n");
+        return;
+    }
+
+    mostrarServicos();
+    printf("Escolha o servico (1 a 4): ");
+    novo.servico = lerInt();
+
+    if (novo.servico < 1 || novo.servico > 4) {
+        printf("Servico invalido.\n");
+        return;
+    }
+
+    printf("Quantidade: ");
+    novo.quantidade = lerInt();
+
+    if (novo.quantidade <= 0) {
+        printf("Quantidade invalida.\n");
+        return;
+    }
+
+    novo.total = precos[novo.servico - 1] * novo.quantidade;
+
+    atendimentos[qntAtendimentos] = novo;
+    qntAtendimentos++;
+
+    printf("Atendimento registrado! Total: R$ %.2f\n", novo.total);
 }
 
 void alterarCadastro() {
-    printf("Funcao de alterar cadastro em desenvolvimento...\n");
+    int codigo, pos;
+
+    printf("Codigo do tutor que deseja alterar: ");
+    codigo = lerInt();
+
+    pos = buscarTutor(codigo);
+    if (pos == -1) {
+        printf("Tutor nao encontrado.\n");
+        return;
+    }
+
+    printf("Nome atual: %s\n", tutores[pos].nome);
+    printf("Novo nome: ");
+    lerTexto(tutores[pos].nome, 50);
+
+    printf("Telefone atual: %s\n", tutores[pos].telefone);
+    printf("Novo telefone: ");
+    lerTexto(tutores[pos].telefone, 20);
+
+    printf("Tutor alterado com sucesso!\n");
 }
 
 void relatorio() {
-    printf("Funcao de relatorio em desenvolvimento...\n");
+    float soma = 0;
+    int pos;
+
+    printf("\n------ RELATORIO ------\n");
+    printf("Tutores cadastrados: %d\n", qntTutores);
+    printf("Animais cadastrados: %d\n", qntAnimais);
+    printf("Atendimentos realizados: %d\n", qntAtendimentos);
+
+    if (qntAtendimentos == 0) {
+        printf("Nenhum atendimento registrado.\n");
+        return;
+    }
+
+    printf("\n--- ATENDIMENTOS ---\n");
+    for (int i = 0; i < qntAtendimentos; i++) {
+        pos = buscarAnimal(atendimentos[i].codigoAnimal);
+
+        printf("%d) Animal: %s | Servico: %s | Qtd: %d | Total: R$ %.2f\n",
+               i + 1,
+               animais[pos].nome,
+               servicos[atendimentos[i].servico - 1],
+               atendimentos[i].quantidade,
+               atendimentos[i].total);
+
+        soma = soma + atendimentos[i].total;
+    }
+
+    printf("\nTOTAL ARRECADADO: R$ %.2f\n", soma);
 }
 
 void mostrarServicos() {
@@ -220,114 +339,3 @@ void mostrarServicos() {
         printf("%d - %s: R$ %.2f\n", i + 1, servicos[i], precos[i]);
     }
 }
-
-/* =========================================================================
-   //CORREÇÃO: Alterado para '/*' para abrir corretamente o bloco isolado
-   =========================================================================
-
-void cadastrarTutor() {
-    if (totalTutores >= MAX_TUTORES) {
-        printf("Limite de tutores atingido.\n");
-        return;
-    }
-
-    printf(" ------ CADASTRO DE TUTOR ------\n");
-    printf("Digite o codigo do tutor (tres primeiros digitos do CPF): ");
-    lerTexto(tutores[totalTutores].cpf, 15);
-    printf("Digite o nome do tutor: ");
-    lerTexto(tutores[totalTutores].nome, 50);
-    printf("Digite o telefone do tutor: ");
-    lerTexto(tutores[totalTutores].telefone, 15);
-    printf("Digite o endereco do tutor: ");
-    lerTexto(tutores[totalTutores].endereco, 100);
-    printf("Digite o email do tutor: ");
-    lerTexto(tutores[totalTutores].email, 50);  
-    totalTutores++;
-
-    printf("Tutor cadastrado com sucesso!\n");
-}
-
-void cadastrarAnimal() {
-    if (totalAnimais >= MAX_ANIMAIS) {
-        printf("Limite de animais atingido.\n");
-        return;
-    }
-    printf(" ------ CADASTRO DE ANIMAL ------\n");
-    printf("Digite o nome do animal: ");
-    lerTexto(animais[totalAnimais].nome, 50);
-    printf("Digite a especie do animal: ");
-    lerTexto(animais[totalAnimais].especie, 20);
-    printf("Digite a raca do animal: ");
-    lerTexto(animais[totalAnimais].raca, 20);
-    printf("Digite a idade do animal: ");
-    scanf("%d", &animais[totalAnimais].idade);
-    getchar();   
-    printf("Digite o peso do animal: ");
-    scanf("%f", &animais[totalAnimais].peso);
-    getchar();  
-    printf("Digite o CPF do tutor do animal: ");
-    lerTexto(animais[totalAnimais].tutorCpf, 15);
-
-    totalAnimais++;
-
-    printf("Animal cadastrado !\n");
-
-}
-
-void listarCadastros() {
-    printf(" ------ LISTA DE TUTORES ------\n");
-    for (int i = 0; i < totalTutores; i++) {
-        printf("Codigo: %s\n", tutores[i].cpf);
-        printf("Nome: %s\n", tutores[i].nome);
-        printf("Telefone: %s\n", tutores[i].telefone);
-        printf("Endereco: %s\n", tutores[i].endereco);
-        printf("Email: %s\n", tutores[i].email);
-        printf("-----------------------------\n");
-    }
-
-    printf(" ------ LISTA DE ANIMAIS ------\n");
-    for (int i = 0; i < totalAnimais; i++) {
-        printf("Nome: %s\n", animais[i].nome);
-        printf("Especie: %s\n", animais[i].especie);
-        printf("Raca: %s\n", animais[i].raca);
-        printf("Idade: %d\n", animais[i].idade);
-        printf("Peso: %.2f\n", animais[i].peso);
-        printf("Codigo do tutor: %s\n", animais[i].tutorCpf);
-        printf("-----------------------------\n");
-    }
-}   
-
-void buscarRegistro() {
-    char cpf;
-    printf("Digite o CPF do tutor a ser buscado: ");
-    lerTexto(cpf, 15);
-
-    for (int i = 0; i < totalTutores; i++) {
-        if (strcmp(tutores[i].cpf, cpf) == 0) {
-            printf(" ------ TUTOR ENCONTRADO ------\n");
-            printf("Codigo: %s\n", tutores[i].cpf);
-            printf("Nome: %s\n", tutores[i].nome);
-            printf("Telefone: %s\n", tutores[i].telefone);
-            printf("Endereco: %s\n", tutores[i].endereco);
-            printf("Email: %s\n", tutores[i].email);
-            printf("-----------------------------\n");
-            return;
-        }
-    }
-
-    printf("Tutor nao encontrado.\n");
-}
-
-void registrarAtendimento() {
-    if (totalAtendimentos >= MAX_ATENDIMENTOS) {
-        printf("Limite de atendimentos atingido.\n");
-        return;
-    }
-
-    printf(" ------ REGISTRO DE ATENDIMENTO ------\n");
-    printf("Digite a hora do atendimento (HH:MM): ");
-    lerTexto(atendimentos[totalAtendimentos].hora, 6);
-    printf("Digite o servico realizado: ");
-
-}
-*/
