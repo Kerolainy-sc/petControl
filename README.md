@@ -12,6 +12,7 @@ O Pet Friends registra tutores e seus bichinhos, organiza os serviços do pet sh
 
 ##  Funcionalidades
 
+```
 - Cadastro de tutores, com código gerado automaticamente
 - Cadastro de animais, vinculados a um tutor já existente
 - Registro de porte (pequeno, médio ou grande) e de idade, em meses para filhotes e em anos para os demais
@@ -21,7 +22,7 @@ O Pet Friends registra tutores e seus bichinhos, organiza os serviços do pet sh
 - Registro de atendimento, com cálculo automático do valor total
 - Alteração de cadastro de tutor
 - Relatório da sessão, com atendimentos agrupados por animal, subtotal de cada um e total arrecadado
-- 
+  ```
 
 ## ૮₍ ´ ꒳ `₎ა Serviços e preços
 
@@ -116,6 +117,7 @@ A documentação completa do sistema está disponível em PDF, com a explicaçã
 
 ### O que você encontra nela
 
+```
 - **Visão geral** do sistema e da divisão do código em 7 blocos
 - **Bibliotecas e constante `MAX`**, com a função de cada biblioteca
 - **Structs** `Tutor`, `Animal` e `Atendimento`, campo por campo
@@ -125,12 +127,15 @@ A documentação completa do sistema está disponível em PDF, com a explicaçã
 - **Funções de cadastro**, **menu principal (`main`)** e **funções das opções do menu**
 - **Como as partes se conectam** (Tutor → Animal → Atendimento)
 - **Limitações conhecidas** do sistema
+  ```
 
 ### Limitações conhecidas
 
+```
 - Os dados não são salvos em arquivo; ao fechar o programa, tudo é perdido.
 - Limite de 10 registros de cada tipo (alterável em `MAX`).
 - Não há exclusão de tutores, animais ou atendimentos.
 - Digitar uma letra onde se espera um número faz o `lerInt` devolver 0, que é tratado como entrada inválida (no menu principal, significa "Sair").
+```
   
-A temática visual é apenas uma inspiração na estética de Hello Kitty (Sanrio) e de Line Friends (LINE). Este projeto não é afiliado, patrocinado nem endossado por essas empresas. Os nomes e marcas citados pertencem aos seus respectivos proprietários, e nenhuma imagem, arte ou personagem oficial é reproduzida neste repositório.
+*A temática visual é apenas uma inspiração na estética de Hello Kitty (Sanrio) e de Line Friends (LINE). Este projeto não é afiliado, patrocinado nem endossado por essas empresas. Os nomes e marcas citados pertencem aos seus respectivos proprietários, e nenhuma imagem, arte ou personagem oficial é reproduzida neste repositório.*
