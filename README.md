@@ -58,7 +58,7 @@ gcc petshop.c -o petshop
 
 ## 📋 Menu do sistema
 
-```
+
 ===== PETFRIEND =====
 1 - Cadastrar tutor
 2 - Cadastrar animal
@@ -69,15 +69,17 @@ gcc petshop.c -o petshop
 7 - Relatorio
 8 - Ver servicos
 0 - Sair
-```
+
 
 ## 💡 Regras do sistema
 
+````
 - Cada tutor e cada animal recebe um código único, gerado pelo próprio programa.
 - Um animal só pode ser cadastrado se o tutor responsável existir.
 - Um atendimento só pode ser registrado para um animal cadastrado.
 - O sistema comporta até 10 tutores, 10 animais e 10 atendimentos por sessão.
 - Entradas inválidas (idade fora do limite, código inexistente, opção errada no menu) exibem uma mensagem, e o programa continua funcionando.
+````
 
 --- 
 
