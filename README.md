@@ -109,11 +109,12 @@ Este projeto foi desenvolvido exclusivamente para fins educacionais, como avalia
 
 ﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌ 𝜗ৎ ﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌ 
 
-## 📚 Documentação
+## ⋮ ⌗ ┆ Documentação
 
 A documentação completa do sistema está disponível em PDF, com a explicação do código bloco a bloco, tabelas de apoio e exemplos:
 
-👉 [Abrir documentação (PDF)](docs/DocSPetFriend.pdf)
+### ⤷ [DocSPetFriend.pdf](https://github.com/user-attachments/files/34291221/DocSPetFriend.pdf)
+
 
 ### O que você encontra nela
 
