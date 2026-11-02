@@ -186,7 +186,7 @@ int main(void) {
     int opcao;
 
     do {
-        printf("\n===== PETSHOP =====\n");
+        printf("\n===== PETFRIEND =====\n");
         printf("1 - Cadastrar tutor\n");
         printf("2 - Cadastrar animal\n");
         printf("3 - Listar cadastros\n");
@@ -288,10 +288,6 @@ void buscarRegistro() {
         printf("Opcao invalida.\n");
     }
 }
-
-// registrarAtendimento, alterarCadastro, relatorio e mostrarServicos
-// continuam exatamente como estavam (nao precisam de mudanca).
-
 
 void registrarAtendimento() {
     Atendimento novo;
