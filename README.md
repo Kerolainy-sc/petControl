@@ -1,4 +1,6 @@
+---
 # ˚₊‧꒰ა 𝑃𝑒𝑡𝐹𝑟𝑖𝑒𝑛𝑑 ໒꒱ ‧₊˚
+---
 
 *Projeto acadêmico, sem fins comerciais.*
 
@@ -8,6 +10,7 @@ Sistema de terminal em linguagem C para gerenciar um pet shop e clínica veterin
 
 O Pet Friends registra tutores e seus bichinhos, organiza os serviços do pet shop, calcula o valor dos atendimentos e exibe um relatório da sessão. Os dados ficam armazenados apenas enquanto o programa está aberto.
 
+---
 
 ### ╰┈➤ Funcionalidades
 
@@ -22,6 +25,7 @@ O Pet Friends registra tutores e seus bichinhos, organiza os serviços do pet sh
 - Alteração de cadastro de tutor
 - Relatório da sessão, com atendimentos agrupados por animal, subtotal de cada um e total arrecadado
   ```
+---
 
 ## ૮₍ ´ ꒳ `₎ა Serviços e preços
 
@@ -75,6 +79,8 @@ gcc petshop.c -o petshop
 - O sistema comporta até 10 tutores, 10 animais e 10 atendimentos por sessão.
 - Entradas inválidas (idade fora do limite, código inexistente, opção errada no menu) exibem uma mensagem, e o programa continua funcionando.
 
+--- 
+
 ## ᯓ Conceitos de C utilizados
 
 - **Structs** (`typedef struct`): `Tutor`, `Animal` e `Atendimento`
@@ -100,11 +106,13 @@ petControl/
 - Raissa
 - Gabriela
 - Thalyta
+  
+---
 
 ## 🎓 Aviso de uso acadêmico
-
+````
 Este projeto foi desenvolvido exclusivamente para fins educacionais, como avaliação final da disciplina de Lógica de Programação em C (UCB). Não tem fins comerciais e não é vendido nem distribuído como produto.
-
+````
 
 
 ## ⋮ ⌗ ┆ Documentação
