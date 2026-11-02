@@ -10,7 +10,7 @@ O Pet Friends registra tutores e seus bichinhos, organiza os serviços do pet sh
 
 ⏔⏔⏔⏔⏔⏔ ꒰ ᧔ෆ᧓ ꒱ ⏔⏔⏔⏔⏔⏔
 
-## ╰┈➤ Funcionalidades
+### ╰┈➤ Funcionalidades
 
 ```
 - Cadastro de tutores, com código gerado automaticamente
