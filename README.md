@@ -106,7 +106,6 @@ petControl/
 Este projeto foi desenvolvido exclusivamente para fins educacionais, como avaliação final da disciplina de Lógica de Programação em C (UCB). Não tem fins comerciais e não é vendido nem distribuído como produto.
 
 
-﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌ 𝜗ৎ ﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌ 
 
 ## ⋮ ⌗ ┆ Documentação
 
