@@ -31,7 +31,6 @@ O Pet Friends registra tutores e seus bichinhos, organiza os serviços do pet sh
 | 🩺 Consulta veterinária | R$ 80,00 |
 | 💉 Vacinação | R$ 60,00 |
 
-﹌﹌﹌﹌﹌﹌ 𝜗ৎ ﹌﹌﹌﹌﹌﹌
 
 ## 💻 Como compilar e executar
 
@@ -103,6 +102,9 @@ petControl/
 ## 🎓 Aviso de uso acadêmico
 
 Este projeto foi desenvolvido exclusivamente para fins educacionais, como avaliação final da disciplina de Lógica de Programação em C (UCB). Não tem fins comerciais e não é vendido nem distribuído como produto.
+
+
+﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌ 𝜗ৎ ﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌﹌ 
 
 ## 📚 Documentação
 
