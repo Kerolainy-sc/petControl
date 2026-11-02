@@ -4,6 +4,8 @@
 
 #define MAX 10
 
+//tags de variaveis
+
 typedef struct {
     int codigo;
     char nome[50];
@@ -15,9 +17,13 @@ typedef struct {
     int codigo;
     char nome[50];
     char especie[30];
-    int idade;
+    int porte;          
+    int idade;          
+    int meses;          
     int codigoTutor;
 } Animal;
+
+char portes[3][15] = { "Pequeno", "Medio", "Grande" };
 
 typedef struct {
     int codigoAnimal;
@@ -34,14 +40,15 @@ char servicos[4][30] = {
     "Banho", "Tosa", "Consulta veterinaria", "Vacinacao"
 };
 
-// Vetores adicionados para servir como banco de dados do sistema, por isso tava dando erro de "variavel nao declarada" no main.
+// Vetores adicionados para servir como banco de dados do sistema
 Tutor tutores[MAX];
 Animal animais[MAX];
 Atendimento atendimentos[MAX];
 
 float precos[4] = {35.0, 45.0, 80.0, 60.0};
 
-/* Busca um tutor pelo codigo. Retorna a posicao ou -1. */
+// Busca um tutor pelo codigo. Retorna a posicao ou -1. */
+
 int buscarTutor(int codigo) {
     int i;
     for (i = 0; i < qntTutores; i++) {
@@ -52,7 +59,8 @@ int buscarTutor(int codigo) {
     return -1;
 }
 
-/* Busca um animal pelo codigo. Retorna a posicao ou -1. */
+// Busca um animal pelo codigo. Retorna a posicao ou -1. 
+
 int buscarAnimal(int codigo) {
     int i;
     for (i = 0; i < qntAnimais; i++) {
@@ -63,13 +71,13 @@ int buscarAnimal(int codigo) {
     return -1;
 }
 
-/* Le uma linha de texto e remove o \n do final. */
+// Le uma linha de texto e remove o \n do final.
+
 void lerTexto(char destino[], int tamanho) {
     fgets(destino, tamanho, stdin);
     destino[strcspn(destino, "\n")] = '\0';
 }
 
-/* Le uma linha e converte para inteiro (nao deixa lixo no buffer). */
 int lerInt(void) {
     char buf[30];
     fgets(buf, sizeof(buf), stdin);
@@ -100,6 +108,7 @@ void cadastrarTutor(void) {
 
 void cadastrarAnimal(void) {
     Animal novo;
+    int filhote;
 
     if (qntAnimais == MAX) {
         printf("Limite de animais atingido.\n");
@@ -109,18 +118,46 @@ void cadastrarAnimal(void) {
     novo.codigo = qntAnimais + 1;
     printf("Codigo do animal (gerado automaticamente): %d\n", novo.codigo);
 
-    //Claudinho pedio pra trocar por fgets//
-
     printf("Nome do animal: ");
     lerTexto(novo.nome, 50);
 
     printf("Especie: ");
     lerTexto(novo.especie, 30);
 
-    printf("Idade: ");
-    novo.idade = lerInt();
-    if (novo.idade < 0 || novo.idade > 100) {
-        printf("Idade invalida. Cadastro cancelado.\n");
+    // Selecao do porte
+    printf("Porte:\n");
+    for (int i = 0; i < 3; i++) {
+        printf("%d - %s\n", i + 1, portes[i]);
+    }
+    printf("Escolha o porte (1 a 3): ");
+    novo.porte = lerInt();
+    if (novo.porte < 1 || novo.porte > 3) {
+        printf("Porte invalido. Cadastro cancelado.\n");
+        return;
+    }
+
+    // Filhote ou nao
+    printf("E filhote (menos de 1 ano)? (1 - Sim / 2 - Nao): ");
+    filhote = lerInt();
+
+    if (filhote == 1) {
+        printf("Idade em meses (1 a 11): ");
+        novo.meses = lerInt();
+        if (novo.meses < 1 || novo.meses > 11) {
+            printf("Meses invalidos. Cadastro cancelado.\n");
+            return;
+        }
+        novo.idade = 0;
+    } else if (filhote == 2) {
+        printf("Idade em anos: ");
+        novo.idade = lerInt();
+        if (novo.idade < 1 || novo.idade > 100) {
+            printf("Idade invalida. Cadastro cancelado.\n");
+            return;
+        }
+        novo.meses = 0;
+    } else {
+        printf("Opcao invalida. Cadastro cancelado.\n");
         return;
     }
 
@@ -149,7 +186,7 @@ int main(void) {
     int opcao;
 
     do {
-        printf("\n===== PETSHOP ;)=====\n");
+        printf("\n===== PETSHOP =====\n");
         printf("1 - Cadastrar tutor\n");
         printf("2 - Cadastrar animal\n");
         printf("3 - Listar cadastros\n");
@@ -179,9 +216,17 @@ int main(void) {
     return 0;
 }
 
-// =========================================================================
-// CORREÇÃO: Escoramento das funções do menu para o compilador não quebrar.
 
+// NOVO: mostra a idade em meses (filhote) ou em anos
+void mostrarIdade(Animal a) {
+    if (a.idade == 0) {
+        printf("%d mes(es) (filhote)", a.meses);
+    } else if (a.idade == 1) {
+        printf("1 ano");
+    } else {
+        printf("%d anos", a.idade);
+    }
+}
 
 void listarCadastros() {
     printf("\n------ LISTA DE TUTORES ------\n");
@@ -193,8 +238,12 @@ void listarCadastros() {
     printf("\n------ LISTA DE ANIMAIS ------\n");
     if (qntAnimais == 0) printf("Nenhum animal cadastrado.\n");
     for (int i = 0; i < qntAnimais; i++) {
-        printf("Codigo: %d | Nome: %s | Especie: %s | Idade: %d | Dono (ID): %d\n", 
-               animais[i].codigo, animais[i].nome, animais[i].especie, animais[i].idade, animais[i].codigoTutor);
+        // ALTERADO: agora mostra o porte e usa mostrarIdade
+        printf("Codigo: %d | Nome: %s | Especie: %s | Porte: %s | Idade: ",
+               animais[i].codigo, animais[i].nome, animais[i].especie,
+               portes[animais[i].porte - 1]);
+        mostrarIdade(animais[i]);
+        printf(" | Dono (ID): %d\n", animais[i].codigoTutor);
     }
 }
 
@@ -228,13 +277,21 @@ void buscarRegistro() {
             printf("Codigo: %d\n", animais[pos].codigo);
             printf("Nome: %s\n", animais[pos].nome);
             printf("Especie: %s\n", animais[pos].especie);
-            printf("Idade: %d\n", animais[pos].idade);
+            // ALTERADO: porte e idade (meses ou anos)
+            printf("Porte: %s\n", portes[animais[pos].porte - 1]);
+            printf("Idade: ");
+            mostrarIdade(animais[pos]);
+            printf("\n");
             printf("Codigo do tutor: %d\n", animais[pos].codigoTutor);
         }
     } else {
         printf("Opcao invalida.\n");
     }
 }
+
+// registrarAtendimento, alterarCadastro, relatorio e mostrarServicos
+// continuam exatamente como estavam (nao precisam de mudanca).
+
 
 void registrarAtendimento() {
     Atendimento novo;
@@ -304,7 +361,6 @@ void alterarCadastro() {
 
 void relatorio() {
     float soma = 0;
-    int pos;
 
     printf("\n------ RELATORIO ------\n");
     printf("Tutores cadastrados: %d\n", qntTutores);
@@ -316,18 +372,36 @@ void relatorio() {
         return;
     }
 
-    printf("\n--- ATENDIMENTOS ---\n");
-    for (int i = 0; i < qntAtendimentos; i++) {
-        pos = buscarAnimal(atendimentos[i].codigoAnimal);
+    printf("\n--- ATENDIMENTOS POR ANIMAL ---\n");
 
-        printf("%d) Animal: %s | Servico: %s | Qtd: %d | Total: R$ %.2f\n",
-               i + 1,
-               animais[pos].nome,
-               servicos[atendimentos[i].servico - 1],
-               atendimentos[i].quantidade,
-               atendimentos[i].total);
+    // Para cada animal, imprime todos os atendimentos dele juntos
+    for (int a = 0; a < qntAnimais; a++) {
+        float subtotal = 0;
+        int cabecalho = 0;   // controla se ja imprimiu o nome do animal
 
-        soma = soma + atendimentos[i].total;
+        for (int i = 0; i < qntAtendimentos; i++) {
+            if (atendimentos[i].codigoAnimal == animais[a].codigo) {
+
+                // Imprime o cabecalho so na primeira vez que achar atendimento
+                if (!cabecalho) {
+                    printf("\nAnimal: %s (Codigo %d)\n",
+                           animais[a].nome, animais[a].codigo);
+                    cabecalho = 1;
+                }
+
+                printf("   - %s | Qtd: %d | Total: R$ %.2f\n",
+                       servicos[atendimentos[i].servico - 1],
+                       atendimentos[i].quantidade,
+                       atendimentos[i].total);
+
+                subtotal += atendimentos[i].total;
+            }
+        }
+
+        if (cabecalho) {
+            printf("   Subtotal do animal: R$ %.2f\n", subtotal);
+            soma += subtotal;
+        }
     }
 
     printf("\nTOTAL ARRECADADO: R$ %.2f\n", soma);
