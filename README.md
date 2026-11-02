@@ -96,21 +96,21 @@ gcc petshop.c -o petshop
 
 ## 📁 Estrutura
 
-
+````
 petControl/
 ├── projeto_petcontrol/
 │   └── petshop.c      # código-fonte
 ├── .gitignore
 └── README.md
-
+````
 
 ## ⊙⊝⊜ Integrantes
-````
+
 - Kerolainy Oliveira
 - Raissa
 - Gabriela
 - Thalyta
-````  
+ 
 ---
 
 ## 🎓 Aviso de uso acadêmico
