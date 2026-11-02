@@ -84,14 +84,14 @@ gcc petshop.c -o petshop
 --- 
 
 ## ᯓ Conceitos de C utilizados
-````
+
 - **Structs** (`typedef struct`): `Tutor`, `Animal` e `Atendimento`
 - **Vetores** de capacidade fixa para armazenar os cadastros
 - **Strings** (`char[]`) lidas com `fgets` de forma segura
 - **Funções** para separar cadastro, busca, cálculo e relatórios
 - **Estruturas condicionais** (`if/else` e `switch`) para as regras e o menu
 - **Laços de repetição** (`for` e `do...while`) para percorrer os dados e manter o menu ativo
-````
+
 ---
 
 ## 📁 Estrutura
