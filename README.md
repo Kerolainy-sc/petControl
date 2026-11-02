@@ -8,7 +8,6 @@ Sistema de terminal em linguagem C para gerenciar um pet shop e clínica veterin
 
 O Pet Friends registra tutores e seus bichinhos, organiza os serviços do pet shop, calcula o valor dos atendimentos e exibe um relatório da sessão. Os dados ficam armazenados apenas enquanto o programa está aberto.
 
-⏔⏔⏔⏔⏔⏔ ꒰ ᧔ෆ᧓ ꒱ ⏔⏔⏔⏔⏔⏔
 
 ### ╰┈➤ Funcionalidades
 
