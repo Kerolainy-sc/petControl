@@ -10,7 +10,7 @@ O Pet Friends registra tutores e seus bichinhos, organiza os serviços do pet sh
 
 ⏔⏔⏔⏔⏔⏔ ꒰ ᧔ෆ᧓ ꒱ ⏔⏔⏔⏔⏔⏔
 
-##  Funcionalidades
+## ╰┈➤ Funcionalidades
 
 ```
 - Cadastro de tutores, com código gerado automaticamente
@@ -76,7 +76,7 @@ gcc petshop.c -o petshop
 - O sistema comporta até 10 tutores, 10 animais e 10 atendimentos por sessão.
 - Entradas inválidas (idade fora do limite, código inexistente, opção errada no menu) exibem uma mensagem, e o programa continua funcionando.
 
-## 🛠️ Conceitos de C utilizados
+## ᯓ Conceitos de C utilizados
 
 - **Structs** (`typedef struct`): `Tutor`, `Animal` e `Atendimento`
 - **Vetores** de capacidade fixa para armazenar os cadastros
@@ -95,7 +95,7 @@ petControl/
 └── README.md
 ```
 
-## 👩‍💻 Integrantes
+## ⊙⊝⊜ Integrantes
 
 - Kerolainy Oliveira
 - Raissa
@@ -113,10 +113,10 @@ Este projeto foi desenvolvido exclusivamente para fins educacionais, como avalia
 
 A documentação completa do sistema está disponível em PDF, com a explicação do código bloco a bloco, tabelas de apoio e exemplos:
 
-### ⤷ [DocSPetFriend.pdf](https://github.com/user-attachments/files/34291221/DocSPetFriend.pdf)
+### ⤷ [DocSPetFriend.pdf](https://github.com/user-attachments/files/34291221/DocSPetFriend.pdf) ˎˊ˗
 
 
-### O que você encontra nela
+### O que você encontra nela ? 
 
 ```
 - **Visão geral** do sistema e da divisão do código em 7 blocos
