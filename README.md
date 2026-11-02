@@ -14,7 +14,6 @@ O Pet Friends registra tutores e seus bichinhos, organiza os serviços do pet sh
 
 ### ╰┈➤ Funcionalidades
 
-```
 - Cadastro de tutores, com código gerado automaticamente
 - Cadastro de animais, vinculados a um tutor já existente
 - Registro de porte (pequeno, médio ou grande) e de idade, em meses para filhotes e em anos para os demais
@@ -24,7 +23,7 @@ O Pet Friends registra tutores e seus bichinhos, organiza os serviços do pet sh
 - Registro de atendimento, com cálculo automático do valor total
 - Alteração de cadastro de tutor
 - Relatório da sessão, com atendimentos agrupados por animal, subtotal de cada um e total arrecadado
-  ```
+ 
 ---
 
 ## ૮₍ ´ ꒳ `₎ა Serviços e preços
