@@ -1,150 +1,282 @@
+# 🐾 ˚₊‧꒰ა PetFriend ໒꒱ ‧₊˚
+### Sistema de gerenciamento para Pet Shop e Clínica Veterinária
 
-# ˚₊‧꒰ა 𝑃𝑒𝑡𝐹𝑟𝑖𝑒𝑛𝑑 ໒꒱ ‧₊˚
+<p align="center">
+  <img src="https://img.shields.io/badge/Linguagem-C-blue?style=for-the-badge&logo=c" />
+  <img src="https://img.shields.io/badge/Compilador-GCC-orange?style=for-the-badge&logo=gnu" />
+  <img src="https://img.shields.io/badge/Projeto-Acadêmico-pink?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Status-Concluído-brightgreen?style=for-the-badge" />
+</p>
+
+<p align="center">
+  <i>Um sistema desenvolvido para facilitar o gerenciamento de tutores, animais e atendimentos veterinários. ♡</i>
+</p>
+
 ---
 
-*Projeto acadêmico, sem fins comerciais.*
+## 🌷 Sobre o projeto
 
-Sistema de terminal em linguagem C para gerenciar um pet shop e clínica veterinária fictícios. Este é o projeto da avaliação final da disciplina de Lógica de Programação em C (UCB).
+O **PetFriend** é um sistema de gerenciamento desenvolvido em linguagem C, com o objetivo de simular o funcionamento de um pet shop integrado a uma clínica veterinária.
 
-## 🐾 Sobre o projeto
+O projeto foi desenvolvido como parte da avaliação final da disciplina de **Lógica de Programação em C**, da Universidade Católica de Brasília (UCB).
 
-O Pet Friends registra tutores e seus bichinhos, organiza os serviços do pet shop, calcula o valor dos atendimentos e exibe um relatório da sessão. Os dados ficam armazenados apenas enquanto o programa está aberto.
+A aplicação funciona diretamente no terminal e permite organizar informações de tutores e seus animais, consultar serviços disponíveis, registrar atendimentos e acompanhar os valores gerados durante uma sessão de utilização.
 
----
+Além de atender às necessidades propostas para o projeto acadêmico, o PetFriend foi desenvolvido com foco na aplicação prática dos principais conceitos de lógica de programação e da linguagem C.
 
-### ╰┈➤ Funcionalidades
+> ♡ Projeto acadêmico, desenvolvido exclusivamente para fins educacionais e sem finalidade comercial.
 
-- Cadastro de tutores, com código gerado automaticamente
-- Cadastro de animais, vinculados a um tutor já existente
-- Registro de porte (pequeno, médio ou grande) e de idade, em meses para filhotes e em anos para os demais
-- Listagem de tutores e animais
-- Catálogo de serviços com preços
-- Busca de tutor ou animal pelo código
-- Registro de atendimento, com cálculo automático do valor total
-- Alteração de cadastro de tutor
-- Relatório da sessão, com atendimentos agrupados por animal, subtotal de cada um e total arrecadado
- 
----
+## 🎯 Objetivos do projeto
 
-## ૮₍ ´ ꒳ `₎ა Serviços e preços
+- Desenvolver um sistema funcional utilizando a linguagem C.
+- Aplicar conceitos de lógica de programação na resolução de problemas.
+- Organizar o cadastro de tutores e animais.
+- Simular o gerenciamento de serviços de um estabelecimento veterinário.
+- Automatizar o cálculo dos valores dos atendimentos.
+- Gerar relatórios para facilitar o acompanhamento dos serviços realizados.
+- Praticar a organização e modularização de códigos por meio de funções e estruturas de dados.
 
+## ✨ Funcionalidades
 
-| Serviço | Preço |
-|---|---|
+O PetFriend conta com funcionalidades organizadas para facilitar o gerenciamento das informações.
+
+### 🐶 1. Gerenciamento de tutores
+- Cadastro de novos tutores.
+- Geração automática de códigos de identificação.
+- Consulta de tutores cadastrados.
+- Listagem dos registros.
+- Alteração das informações de um tutor.
+
+### 🐱 2. Gerenciamento de animais
+- Cadastro de animais vinculados a tutores existentes.
+- Registro do nome e da espécie do animal.
+- Identificação da raça e do porte.
+- Registro da idade, considerando meses para filhotes e anos para os demais animais.
+- Geração automática de códigos de identificação.
+- Consulta e listagem dos animais cadastrados.
+
+### 🫧 3. Catálogo de serviços
+O sistema disponibiliza um catálogo de serviços com valores previamente definidos, permitindo consultar os procedimentos oferecidos pelo estabelecimento.
+
+### 🩺 4. Registro de atendimentos
+- Seleção de um animal previamente cadastrado.
+- Registro dos serviços realizados.
+- Cálculo automático do valor do atendimento.
+- Associação dos atendimentos aos respectivos animais.
+
+### 📊 5. Relatórios
+O sistema disponibiliza um relatório da sessão contendo:
+- Atendimentos realizados.
+- Serviços registrados por animal.
+- Subtotal dos atendimentos de cada animal.
+- Valor total arrecadado durante a sessão.
+
+### 🔎 6. Sistema de consultas
+- Busca de tutores pelo código de identificação.
+- Busca de animais pelo código de identificação.
+- Verificação da existência dos registros antes de realizar operações.
+
+## ૮₍ ´ ꒳ `₎ა Catálogo de serviços e preços
+
+O sistema trabalha com os seguintes serviços:
+
+| Serviço | Valor |
+|:--|--:|
 | 🫧 Banho | R$ 35,00 |
 | ✂️ Tosa | R$ 45,00 |
 | 🩺 Consulta veterinária | R$ 80,00 |
 | 💉 Vacinação | R$ 60,00 |
 
+*Os valores são fictícios e utilizados exclusivamente para simulação acadêmica.*
 
-## 💻 Como compilar e executar
+## 💻 Tecnologias e conceitos utilizados
 
-É necessário ter o compilador GCC instalado.
+O projeto foi desenvolvido utilizando:
 
-```bash
-# entre na pasta do código
-cd projeto_petcontrol
+| Tecnologia / Recurso | Aplicação |
+|:--|:--|
+| Linguagem C | Desenvolvimento da aplicação |
+| GCC | Compilação do código-fonte |
+| VS Code | Ambiente de desenvolvimento |
+| Git e GitHub | Versionamento e hospedagem do projeto |
 
-# compile
-gcc petshop.c -o petshop
+### Conceitos de programação aplicados
 
-# execute (Windows)
-.\petshop
+- **Structs (`typedef struct`):** organização dos dados de tutores, animais e atendimentos.
+- **Vetores:** armazenamento dos registros durante a execução.
+- **Strings (`char[]`):** manipulação de nomes, telefones e outras informações.
+- **Funções:** divisão do código em operações específicas.
+- **Condicionais (`if/else`):** validação de informações e aplicação de regras.
+- **Estrutura `switch`:** gerenciamento das opções do menu.
+- **Laços (`for` e `do...while`):** repetição de operações e navegação pelo sistema.
+- **Ponteiros e parâmetros:** passagem e manipulação de dados entre funções.
+- **Biblioteca `string.h`:** manipulação e comparação de strings.
+- **Biblioteca `stdio.h`:** entrada e saída de informações.
 
-# execute (Linux ou macOS)
-./petshop
-```
+## 📋 Menu principal
 
-## 📋 Menu do sistema
+Ao executar o programa, o usuário encontra o seguinte menu:
 
-````
-===== PETFRIEND =====
+```text
+========== PETFRIEND ==========
+
 1 - Cadastrar tutor
 2 - Cadastrar animal
 3 - Listar cadastros
 4 - Buscar tutor ou animal
 5 - Registrar atendimento
 6 - Alterar tutor
-7 - Relatorio
-8 - Ver servicos
+7 - Relatório
+8 - Ver serviços
+
 0 - Sair
-````
 
-## 💡 Regras do sistema
+===============================
+```
 
+Cada opção direciona o usuário para uma funcionalidade específica, permitindo utilizar o sistema por meio de uma interface simples e interativa no terminal.
 
-- Cada tutor e cada animal recebe um código único, gerado pelo próprio programa.
-- Um animal só pode ser cadastrado se o tutor responsável existir.
-- Um atendimento só pode ser registrado para um animal cadastrado.
-- O sistema comporta até 10 tutores, 10 animais e 10 atendimentos por sessão.
-- Entradas inválidas (idade fora do limite, código inexistente, opção errada no menu) exibem uma mensagem, e o programa continua funcionando.
+## ⚙️ Regras de negócio
 
+Para garantir a consistência das informações, o sistema possui algumas regras:
 
---- 
+1. Cada tutor recebe um código único gerado automaticamente.
+2. Cada animal também recebe um código único.
+3. Um animal somente pode ser cadastrado quando seu tutor responsável já estiver registrado.
+4. Um atendimento somente pode ser realizado para um animal previamente cadastrado.
+5. Os valores dos serviços são definidos pelo catálogo do sistema.
+6. Os relatórios consideram os atendimentos realizados durante a sessão atual.
+7. O sistema possui capacidade máxima de 10 tutores, 10 animais e 10 atendimentos por sessão.
+8. Informações inválidas são identificadas e recebem mensagens de orientação ao usuário.
 
-## ᯓ Conceitos de C utilizados
+## 🚀 Como executar o projeto
 
-- **Structs** (`typedef struct`): `Tutor`, `Animal` e `Atendimento`
-- **Vetores** de capacidade fixa para armazenar os cadastros
-- **Strings** (`char[]`) lidas com `fgets` de forma segura
-- **Funções** para separar cadastro, busca, cálculo e relatórios
-- **Estruturas condicionais** (`if/else` e `switch`) para as regras e o menu
-- **Laços de repetição** (`for` e `do...while`) para percorrer os dados e manter o menu ativo
+### Pré-requisitos
 
----
+Antes de executar o PetFriend, é necessário ter:
 
-## 📁 Estrutura
+- GCC instalado.
+- Visual Studio Code ou outro editor de código.
+- Terminal ou prompt de comando.
 
-````
+### 1. Clone o repositório
+
+```bash
+git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
+```
+
+### 2. Entre na pasta do projeto
+
+```bash
+cd petControl/projeto_petcontrol
+```
+
+### 3. Compile o programa
+
+```bash
+gcc petshop.c -o petshop
+```
+
+### 4. Execute o programa
+
+**Windows:**
+
+```bash
+.\petshop.exe
+```
+
+**Linux ou macOS:**
+
+```bash
+./petshop
+```
+
+Após a execução, o menu principal será apresentado no terminal.
+
+## 📁 Estrutura do projeto
+
+A organização dos arquivos está estruturada da seguinte maneira:
+
+```text
 petControl/
+│
 ├── projeto_petcontrol/
-│   └── petshop.c      # código-fonte
+│   └── petshop.c
+│
 ├── .gitignore
+│
 └── README.md
-````
+```
 
-## ⊙⊝⊜ Integrantes
+| Arquivo | Descrição |
+|:--|:--|
+| `petshop.c` | Código-fonte principal do sistema. |
+| `.gitignore` | Define arquivos e pastas que não devem ser enviados ao Git. |
+| `README.md` | Documentação e apresentação do projeto. |
 
-- Kerolainy Oliveira
-- Raissa
+## 📖 Documentação complementar
+
+Para apresentar o funcionamento interno do PetFriend, foi elaborada uma documentação em PDF com explicações detalhadas sobre a implementação do sistema.
+
+### 📄 DocSPetFriend.pdf
+
+[**➜ Acessar documentação completa do PetFriend**](https://github.com/user-attachments/files/34291221/DocSPetFriend.pdf)
+
+O documento apresenta:
+
+- Visão geral e divisão do código em sete blocos.
+- Bibliotecas utilizadas e constante `MAX`.
+- Estruturas `Tutor`, `Animal` e `Atendimento`, com explicação de seus campos.
+- Variáveis globais, vetores e contadores.
+- Funções auxiliares explicadas detalhadamente.
+- Utilização de `fgets` e comparação com `scanf`.
+- Funcionamento das funções de cadastro e consulta.
+- Explicação do menu principal e das opções disponíveis.
+- Relação entre tutores, animais e atendimentos.
+- Limitações conhecidas da aplicação.
+
+## ⚠️ Limitações conhecidas
+
+Apesar de atender aos objetivos propostos, o sistema possui algumas limitações:
+
+- **Armazenamento temporário:** os dados são mantidos apenas na memória RAM durante a execução. Ao fechar o programa, os registros são perdidos.
+- **Capacidade limitada:** o sistema permite até 10 registros de cada tipo, conforme a constante `MAX`.
+- **Sem exclusão de registros:** não existe uma funcionalidade para excluir tutores, animais ou atendimentos.
+- **Interface em terminal:** a aplicação não possui interface gráfica ou versão web.
+- **Sem banco de dados:** as informações não são integradas a um banco de dados externo.
+- **Sem autenticação:** o sistema não possui controle de acesso por usuários e senhas.
+
+## 👩‍💻 Integrantes
+
+Projeto desenvolvido em grupo por:
+
+- Kerolainy 
+- Raissa 
 - Gabriela
 - Thalyta
- 
----
+
+**Instituição:** Universidade Católica de Brasília (UCB)  
+**Disciplina:** Lógica de Programação em C  
+**Projeto:** PetFriend
 
 ## 🎓 Aviso de uso acadêmico
 
-*Este projeto foi desenvolvido exclusivamente para fins educacionais, como avaliação final da disciplina de Lógica de Programação em C (UCB). Não tem fins comerciais e não é vendido nem distribuído como produto.*
+Este projeto foi desenvolvido exclusivamente para fins educacionais, como parte da avaliação final da disciplina de Lógica de Programação em C da Universidade Católica de Brasília (UCB).
 
+O PetFriend não possui finalidade comercial, não é vendido e não representa um produto destinado à utilização profissional.
 
-## ⋮ ⌗ ┆ Documentação
+## 🎀 Créditos e identidade visual
 
-A documentação completa do sistema está disponível em PDF, com a explicação do código bloco a bloco, tabelas de apoio e exemplos:
+A identidade visual e a temática do projeto foram inspiradas na estética *kawaii*, com referências visuais a Hello Kitty (Sanrio) e Line Friends (LINE).
 
-### ⤷ [DocSPetFriend.pdf](https://github.com/user-attachments/files/34291221/DocSPetFriend.pdf) ˎˊ˗
+O projeto não possui vínculo, parceria, patrocínio ou associação oficial com essas empresas. Todos os nomes e marcas mencionados pertencem aos seus respectivos proprietários.
 
+---
 
-### O que você encontra nela ? 
+<p align="center">
+  Feito com ♡ e muito código em C!
+</p>
 
-```
-- **Visão geral** do sistema e da divisão do código em 7 blocos
-- **Bibliotecas e constante `MAX`**, com a função de cada biblioteca
-- **Structs** `Tutor`, `Animal` e `Atendimento`, campo por campo
-- **Variáveis globais**: contadores, vetores, serviços, portes e preços
-- **Funções auxiliares** explicadas linha por linha: `lerTexto`, `lerInt`, `buscarTutor` e `buscarAnimal`
-- **Por que usamos `fgets` em vez de `scanf`**, com tabelas mostrando o problema do Enter na fila do teclado
-- **Funções de cadastro**, **menu principal (`main`)** e **funções das opções do menu**
-- **Como as partes se conectam** (Tutor → Animal → Atendimento)
-- **Limitações conhecidas** do sistema
-  ```
-
-### Limitações conhecidas
-
-```
-- Os dados não são salvos em arquivo; ao fechar o programa, tudo é perdido.
-- Limite de 10 registros de cada tipo (alterável em `MAX`).
-- Não há exclusão de tutores, animais ou atendimentos.
-- Digitar uma letra onde se espera um número faz o `lerInt` devolver 0, que é tratado como entrada inválida (no menu principal, significa "Sair").
-```
-  
-*A temática visual é apenas uma inspiração na estética de Hello Kitty (Sanrio) e de Line Friends (LINE). Este projeto não é afiliado, patrocinado nem endossado por essas empresas. Os nomes e marcas citados pertencem aos seus respectivos proprietários, e nenhuma imagem, arte ou personagem oficial é reproduzida neste repositório.*
+<p align="center">
+  🐾 <b>PetFriend — Cuidando dos detalhes, organizando cada atendimento.</b> 🐾
+</p>
