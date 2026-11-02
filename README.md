@@ -58,7 +58,7 @@ gcc petshop.c -o petshop
 
 ## 📋 Menu do sistema
 
-
+````
 ===== PETFRIEND =====
 1 - Cadastrar tutor
 2 - Cadastrar animal
@@ -69,52 +69,53 @@ gcc petshop.c -o petshop
 7 - Relatorio
 8 - Ver servicos
 0 - Sair
-
+````
 
 ## 💡 Regras do sistema
 
-````
+
 - Cada tutor e cada animal recebe um código único, gerado pelo próprio programa.
 - Um animal só pode ser cadastrado se o tutor responsável existir.
 - Um atendimento só pode ser registrado para um animal cadastrado.
 - O sistema comporta até 10 tutores, 10 animais e 10 atendimentos por sessão.
 - Entradas inválidas (idade fora do limite, código inexistente, opção errada no menu) exibem uma mensagem, e o programa continua funcionando.
-````
+
 
 --- 
 
 ## ᯓ Conceitos de C utilizados
-
+````
 - **Structs** (`typedef struct`): `Tutor`, `Animal` e `Atendimento`
 - **Vetores** de capacidade fixa para armazenar os cadastros
 - **Strings** (`char[]`) lidas com `fgets` de forma segura
 - **Funções** para separar cadastro, busca, cálculo e relatórios
 - **Estruturas condicionais** (`if/else` e `switch`) para as regras e o menu
 - **Laços de repetição** (`for` e `do...while`) para percorrer os dados e manter o menu ativo
+````
+---
 
 ## 📁 Estrutura
 
-```
+
 petControl/
 ├── projeto_petcontrol/
 │   └── petshop.c      # código-fonte
 ├── .gitignore
 └── README.md
-```
+
 
 ## ⊙⊝⊜ Integrantes
-
+````
 - Kerolainy Oliveira
 - Raissa
 - Gabriela
 - Thalyta
-  
+````  
 ---
 
 ## 🎓 Aviso de uso acadêmico
-````
-Este projeto foi desenvolvido exclusivamente para fins educacionais, como avaliação final da disciplina de Lógica de Programação em C (UCB). Não tem fins comerciais e não é vendido nem distribuído como produto.
-````
+
+*Este projeto foi desenvolvido exclusivamente para fins educacionais, como avaliação final da disciplina de Lógica de Programação em C (UCB). Não tem fins comerciais e não é vendido nem distribuído como produto.*
 
 
 ## ⋮ ⌗ ┆ Documentação
