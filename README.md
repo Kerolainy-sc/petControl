@@ -1,4 +1,4 @@
-# 🐾 PetFriend
+# 🐾 Cherry Pets
 ### Sistema de gerenciamento para Pet Shop e Clínica Veterinária
 
 <p align="center">
