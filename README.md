@@ -253,7 +253,7 @@ Projeto desenvolvido em grupo por:
 - Kerolainy 
 - Raissa 
 - Gabriela
-- Thalyta
+- Thalita
 
 **Instituição:** Universidade Católica de Brasília (UCB)  
 **Disciplina:** Lógica de Programação em C  
