@@ -1,6 +1,10 @@
-# 🍒 Hello Cherry Pet
+<div align="center">
+
+# <img src="gif cina" width="30" align="center" /> Hello Cherry Pet <img src="cherry.gif" width="30" align="center" />
 
 ### Sistema de gerenciamento para Pet Shop e Clínica Veterinária
+
+</div>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Linguagem-C-ffffff?style=for-the-badge&labelColor=ffd1dc&logo=c&logoColor=49313D&color=ffffff" />
