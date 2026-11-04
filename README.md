@@ -1,5 +1,5 @@
-                                      # 🐾 ˚₊‧꒰ა PetFriend ໒꒱ ‧₊˚
-                   ### Sistema de gerenciamento para Pet Shop e Clínica Veterinária
+# 🐾 ˚₊‧꒰ა PetFriend ໒꒱ ‧₊˚
+### Sistema de gerenciamento para Pet Shop e Clínica Veterinária
 
 <p align="center">
   <img src="https://img.shields.io/badge/Linguagem-C-blue?style=for-the-badge&logo=c" />
