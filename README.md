@@ -243,8 +243,8 @@ Apesar de atender aos objetivos propostos, o sistema possui algumas limitações
 
 Projeto desenvolvido em grupo por:
 
-- Kerolainy Oliveira
-- Raissa dos Santos de Oliveira
+- Kerolainy 
+- Raissa 
 - Gabriela
 - Thalyta
 
