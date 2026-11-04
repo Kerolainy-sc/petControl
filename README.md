@@ -1,15 +1,15 @@
-# 🐾 ˚₊‧꒰ა PetFriend ໒꒱ ‧₊˚
+# 🐾 PetFriend
 ### Sistema de gerenciamento para Pet Shop e Clínica Veterinária
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Linguagem-C-blue?style=for-the-badge&logo=c" />
-  <img src="https://img.shields.io/badge/Compilador-GCC-orange?style=for-the-badge&logo=gnu" />
-  <img src="https://img.shields.io/badge/Projeto-Acadêmico-pink?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Status-Concluído-brightgreen?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Linguagem-C-401923?style=for-the-badge&logo=c&logoColor=ffffff" />
+  <img src="https://img.shields.io/badge/Compilador-GCC-8C3E5B?style=for-the-badge&logo=gnu&logoColor=ffffff" />
+  <img src="https://img.shields.io/badge/Projeto-Acadêmico-D97197?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Status-Concluído-D96C9F?style=for-the-badge" />
 </p>
 
 <p align="center">
-  <i>Um sistema desenvolvido para facilitar o gerenciamento de tutores, animais e atendimentos veterinários. ♡</i>
+  <b>♡ Cuidando dos detalhes, organizando cada atendimento. ♡</b>
 </p>
 
 ---
@@ -24,7 +24,9 @@ A aplicação funciona diretamente no terminal e permite organizar informações
 
 Além de atender às necessidades propostas para o projeto acadêmico, o PetFriend foi desenvolvido com foco na aplicação prática dos principais conceitos de lógica de programação e da linguagem C.
 
-> ♡ Projeto acadêmico, desenvolvido exclusivamente para fins educacionais e sem finalidade comercial.
+<p align="center">
+  <b>Projeto acadêmico • Sem fins comerciais</b>
+</p>
 
 ## 🎯 Objetivos do projeto
 
@@ -33,52 +35,54 @@ Além de atender às necessidades propostas para o projeto acadêmico, o PetFrie
 - Organizar o cadastro de tutores e animais.
 - Simular o gerenciamento de serviços de um estabelecimento veterinário.
 - Automatizar o cálculo dos valores dos atendimentos.
-- Gerar relatórios para facilitar o acompanhamento dos serviços realizados.
-- Praticar a organização e modularização de códigos por meio de funções e estruturas de dados.
+- Gerar relatórios para acompanhar os serviços realizados.
+- Praticar a organização e modularização de códigos.
 
 ## ✨ Funcionalidades
 
-O PetFriend conta com funcionalidades organizadas para facilitar o gerenciamento das informações.
-
 ### 🐶 1. Gerenciamento de tutores
+
 - Cadastro de novos tutores.
 - Geração automática de códigos de identificação.
-- Consulta de tutores cadastrados.
-- Listagem dos registros.
+- Consulta e listagem dos tutores cadastrados.
 - Alteração das informações de um tutor.
 
 ### 🐱 2. Gerenciamento de animais
+
 - Cadastro de animais vinculados a tutores existentes.
-- Registro do nome e da espécie do animal.
+- Registro do nome e da espécie.
 - Identificação da raça e do porte.
-- Registro da idade, considerando meses para filhotes e anos para os demais animais.
+- Registro da idade em meses para filhotes e anos para os demais animais.
 - Geração automática de códigos de identificação.
 - Consulta e listagem dos animais cadastrados.
 
 ### 🫧 3. Catálogo de serviços
-O sistema disponibiliza um catálogo de serviços com valores previamente definidos, permitindo consultar os procedimentos oferecidos pelo estabelecimento.
+
+- Consulta dos serviços disponíveis.
+- Visualização dos preços.
+- Utilização dos valores no registro de atendimentos.
 
 ### 🩺 4. Registro de atendimentos
+
 - Seleção de um animal previamente cadastrado.
 - Registro dos serviços realizados.
 - Cálculo automático do valor do atendimento.
 - Associação dos atendimentos aos respectivos animais.
 
 ### 📊 5. Relatórios
-O sistema disponibiliza um relatório da sessão contendo:
-- Atendimentos realizados.
+
+- Atendimentos realizados durante a sessão.
 - Serviços registrados por animal.
 - Subtotal dos atendimentos de cada animal.
 - Valor total arrecadado durante a sessão.
 
 ### 🔎 6. Sistema de consultas
-- Busca de tutores pelo código de identificação.
-- Busca de animais pelo código de identificação.
+
+- Busca de tutores pelo código.
+- Busca de animais pelo código.
 - Verificação da existência dos registros antes de realizar operações.
 
-## ૮₍ ´ ꒳ `₎ა Catálogo de serviços e preços
-
-O sistema trabalha com os seguintes serviços:
+## 🎀 Catálogo de serviços e preços
 
 | Serviço | Valor |
 |:--|--:|
@@ -91,16 +95,16 @@ O sistema trabalha com os seguintes serviços:
 
 ## 💻 Tecnologias e conceitos utilizados
 
-O projeto foi desenvolvido utilizando:
+### Tecnologias
 
-| Tecnologia / Recurso | Aplicação |
+| Tecnologia | Aplicação |
 |:--|:--|
 | Linguagem C | Desenvolvimento da aplicação |
 | GCC | Compilação do código-fonte |
-| VS Code | Ambiente de desenvolvimento |
-| Git e GitHub | Versionamento e hospedagem do projeto |
+| Visual Studio Code | Ambiente de desenvolvimento |
+| Git e GitHub | Versionamento e hospedagem |
 
-### Conceitos de programação aplicados
+### Conceitos de programação
 
 - **Structs (`typedef struct`):** organização dos dados de tutores, animais e atendimentos.
 - **Vetores:** armazenamento dos registros durante a execução.
@@ -109,36 +113,31 @@ O projeto foi desenvolvido utilizando:
 - **Condicionais (`if/else`):** validação de informações e aplicação de regras.
 - **Estrutura `switch`:** gerenciamento das opções do menu.
 - **Laços (`for` e `do...while`):** repetição de operações e navegação pelo sistema.
-- **Ponteiros e parâmetros:** passagem e manipulação de dados entre funções.
 - **Biblioteca `string.h`:** manipulação e comparação de strings.
 - **Biblioteca `stdio.h`:** entrada e saída de informações.
 
 ## 📋 Menu principal
 
-Ao executar o programa, o usuário encontra o seguinte menu:
-
 ```text
-========== PETFRIEND ==========
-
-1 - Cadastrar tutor
-2 - Cadastrar animal
-3 - Listar cadastros
-4 - Buscar tutor ou animal
-5 - Registrar atendimento
-6 - Alterar tutor
-7 - Relatório
-8 - Ver serviços
-
-0 - Sair
-
-===============================
+╔════════════════════════════════╗
+║           PETFRIEND            ║
+╠════════════════════════════════╣
+║  1 - Cadastrar tutor           ║
+║  2 - Cadastrar animal          ║
+║  3 - Listar cadastros           ║
+║  4 - Buscar tutor ou animal    ║
+║  5 - Registrar atendimento     ║
+║  6 - Alterar tutor             ║
+║  7 - Relatório                 ║
+║  8 - Ver serviços              ║
+║                                ║
+║  0 - Sair                      ║
+╚════════════════════════════════╝
 ```
 
-Cada opção direciona o usuário para uma funcionalidade específica, permitindo utilizar o sistema por meio de uma interface simples e interativa no terminal.
+O menu principal permite acessar as funcionalidades por meio de uma interface simples e interativa no terminal.
 
 ## ⚙️ Regras de negócio
-
-Para garantir a consistência das informações, o sistema possui algumas regras:
 
 1. Cada tutor recebe um código único gerado automaticamente.
 2. Cada animal também recebe um código único.
@@ -153,8 +152,6 @@ Para garantir a consistência das informações, o sistema possui algumas regras
 
 ### Pré-requisitos
 
-Antes de executar o PetFriend, é necessário ter:
-
 - GCC instalado.
 - Visual Studio Code ou outro editor de código.
 - Terminal ou prompt de comando.
@@ -165,7 +162,7 @@ Antes de executar o PetFriend, é necessário ter:
 git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
 ```
 
-### 2. Entre na pasta do projeto
+### 2. Acesse a pasta do código
 
 ```bash
 cd petControl/projeto_petcontrol
@@ -191,11 +188,7 @@ gcc petshop.c -o petshop
 ./petshop
 ```
 
-Após a execução, o menu principal será apresentado no terminal.
-
 ## 📁 Estrutura do projeto
-
-A organização dos arquivos está estruturada da seguinte maneira:
 
 ```text
 petControl/
@@ -211,7 +204,7 @@ petControl/
 | Arquivo | Descrição |
 |:--|:--|
 | `petshop.c` | Código-fonte principal do sistema. |
-| `.gitignore` | Define arquivos e pastas que não devem ser enviados ao Git. |
+| `.gitignore` | Define arquivos e pastas ignorados pelo Git. |
 | `README.md` | Documentação e apresentação do projeto. |
 
 ## 📖 Documentação complementar
@@ -220,7 +213,7 @@ Para apresentar o funcionamento interno do PetFriend, foi elaborada uma document
 
 ### 📄 DocSPetFriend.pdf
 
-[**➜ Acessar documentação completa do PetFriend**](https://github.com/user-attachments/files/34291221/DocSPetFriend.pdf)
+[➜ Acessar documentação completa do PetFriend](https://github.com/user-attachments/files/34291221/DocSPetFriend.pdf)
 
 O documento apresenta:
 
@@ -241,19 +234,19 @@ Apesar de atender aos objetivos propostos, o sistema possui algumas limitações
 
 - **Armazenamento temporário:** os dados são mantidos apenas na memória RAM durante a execução. Ao fechar o programa, os registros são perdidos.
 - **Capacidade limitada:** o sistema permite até 10 registros de cada tipo, conforme a constante `MAX`.
-- **Sem exclusão de registros:** não existe uma funcionalidade para excluir tutores, animais ou atendimentos.
+- **Sem exclusão de registros:** não existe funcionalidade para excluir tutores, animais ou atendimentos.
 - **Interface em terminal:** a aplicação não possui interface gráfica ou versão web.
 - **Sem banco de dados:** as informações não são integradas a um banco de dados externo.
 - **Sem autenticação:** o sistema não possui controle de acesso por usuários e senhas.
 
-## 👩‍💻 Integrantes
+## 👩🏻‍💻 Integrantes
 
 Projeto desenvolvido em grupo por:
 
-- Kerolainy 
-- Raissa 
+- Kerolainy Oliveira
+- Raissa dos Santos de Oliveira
 - Gabriela
-- Thalita
+- Thalyta
 
 **Instituição:** Universidade Católica de Brasília (UCB)  
 **Disciplina:** Lógica de Programação em C  
@@ -274,9 +267,17 @@ O projeto não possui vínculo, parceria, patrocínio ou associação oficial co
 ---
 
 <p align="center">
-  Feito com ♡ e muito código em C!
+  <img src="https://img.shields.io/badge/401923-Vinho-401923?style=flat-square" />
+  <img src="https://img.shields.io/badge/8C3E5B-Rosa%20escuro-8C3E5B?style=flat-square" />
+  <img src="https://img.shields.io/badge/D97197-Rosa%20antigo-D97197?style=flat-square" />
+  <img src="https://img.shields.io/badge/D96C9F-Rosa%20vibrante-D96C9F?style=flat-square" />
+  <img src="https://img.shields.io/badge/F28DC4-Rosa%20pastel-F28DC4?style=flat-square" />
 </p>
 
 <p align="center">
-  🐾 <b>PetFriend — Cuidando dos detalhes, organizando cada atendimento.</b> 🐾
+  <b>Feito com ♡, dedicação e muito código em C!</b>
+</p>
+
+<p align="center">
+  <sub>PetFriend © Projeto acadêmico — UCB</sub>
 </p>
