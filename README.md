@@ -1,6 +1,20 @@
 <div align="center">
 
-# <img src="gif cina" width="30" align="center" /> Hello Cherry Pet <img src="cherry.gif" width="30" align="center" />
+# <img src="https://usagif.com/wp-content/uploads/gify/cinnamoroll-wrapping-ears-cute-usagif.gif" width="30" align="center" /> Hello Cherry Pet <img src="https://usagif.com/wp-content/uploads/gify/cinnamoroll-wrapping-ears-cute-usagif.gif" width="30" align="center" />
+
+### Sistema de gerenciamento para Pet Shop e Clínica Veterinária
+
+</div>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Linguagem-C-ffffff?style=for-the-badge&labelColor=ffd1dc&logo=c&logoColor=49313D&color=ffffff" />
+  <img src="https://img.shields.io/badge/Compilador-GCC-ffffff?style=for-the-badge&labelColor=ffd1dc&logo=gnu&logoColor=49313D&color=ffffff" />
+  <img src="https://img.shields.io/badge/Projeto-Acadêmico-ffffff?style=for-the-badge&labelColor=ffd1dc&color=ffffff" />
+</p>
+
+<p align="center">
+  <b>♡ Cuidando dos detalhes, organizando cada atendimento. ♡</b>
+</p>
 
 ### Sistema de gerenciamento para Pet Shop e Clínica Veterinária
 
