@@ -1,126 +1,102 @@
-# 🍒 Cherry Pet
+# 🍒 Hello Cherry Pet
+
 ### Sistema de gerenciamento para Pet Shop e Clínica Veterinária
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Linguagem-C-401923?style=for-the-badge&logo=c&logoColor=ffffff" />
-  <img src="https://img.shields.io/badge/Compilador-GCC-8C3E5B?style=for-the-badge&logo=gnu&logoColor=ffffff" />
-  <img src="https://img.shields.io/badge/Projeto-Acadêmico-D97197?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Status-Concluído-D96C9F?style=for-the-badge" />
-</p>
+\<p align="center">
+&#x20; \<img src="[https://img.shields.io/badge/Linguagem-C-BDF2D4?style=for-the-badge&logo=c&logoColor=49313D](https://img.shields.io/badge/Linguagem-C-BDF2D4?style=for-the-badge\&logo=c\&logoColor=49313D)" />
+&#x20; \<img src="[https://img.shields.io/badge/Compilador-GCC-E94B78?style=for-the-badge&logo=gnu&logoColor=ffffff](https://img.shields.io/badge/Compilador-GCC-E94B78?style=for-the-badge\&logo=gnu\&logoColor=ffffff)" />
+&#x20; \<img src="[https://img.shields.io/badge/Projeto-Acadêmico-F7A8C4?style=for-the-badge](https://img.shields.io/badge/Projeto-Acadêmico-F7A8C4?style=for-the-badge)" />
+\</p>
 
-<p align="center">
-  <b>♡ Cuidando dos detalhes, organizando cada atendimento. ♡</b>
-</p>
-
----
+\<p align="center">
+&#x20; \<b>♡ Cuidando dos detalhes, organizando cada atendimento. ♡\</b>
+\</p>
 
 ## 🌷 Sobre o projeto
 
-O **Cherry Pet** é um sistema de gerenciamento desenvolvido em linguagem C, com o objetivo de simular o funcionamento de um pet shop integrado a uma clínica veterinária.
+O **Hello Cherry Pet** é um sistema de gerenciamento desenvolvido em linguagem C, com o objetivo de simular o funcionamento de um pet shop integrado a uma clínica veterinária.
 
 O projeto foi desenvolvido como parte da avaliação final da disciplina de **Lógica de Programação em C**, da Universidade Católica de Brasília (UCB).
 
 A aplicação funciona diretamente no terminal e permite organizar informações de tutores e seus animais, consultar serviços disponíveis, registrar atendimentos e acompanhar os valores gerados durante uma sessão de utilização.
 
-Além de atender às necessidades propostas para o projeto acadêmico, o Cherry Pet foi desenvolvido com foco na aplicação prática dos principais conceitos de lógica de programação e da linguagem C.
-
-<p align="center">
-  <b>Projeto acadêmico • Sem fins comerciais</b>
-</p>
-
-## 🎯 Objetivos do projeto
+## 🍓 Objetivos do projeto
 
 - Desenvolver um sistema funcional utilizando a linguagem C.
-- Aplicar conceitos de lógica de programação na resolução de problemas.
+- Aplicar conceitos de lógica de programação.
 - Organizar o cadastro de tutores e animais.
-- Simular o gerenciamento de serviços de um estabelecimento veterinário.
+- Simular o gerenciamento de serviços veterinários.
 - Automatizar o cálculo dos valores dos atendimentos.
-- Gerar relatórios para acompanhar os serviços realizados.
-- Praticar a organização e modularização de códigos.
+- Gerar relatórios dos serviços realizados.
 
-## ✨ Funcionalidades
+## 🐾 Funcionalidades
 
-### 🐶 1. Gerenciamento de tutores
+### 🎀 Gerenciamento de tutores
 
-- Cadastro de novos tutores.
-- Geração automática de códigos de identificação.
-- Consulta e listagem dos tutores cadastrados.
-- Alteração das informações de um tutor.
+- Cadastro de tutores.
+- Geração automática de códigos.
+- Consulta e listagem.
+- Alteração de informações.
 
-### 🐱 2. Gerenciamento de animais
+### 🐱 Gerenciamento de animais
 
-- Cadastro de animais vinculados a tutores existentes.
-- Registro do nome e da espécie.
-- Identificação da raça e do porte.
-- Registro da idade em meses para filhotes e anos para os demais animais.
-- Geração automática de códigos de identificação.
-- Consulta e listagem dos animais cadastrados.
+- Cadastro vinculado a tutores existentes.
+- Registro de nome, espécie, raça e porte.
+- Registro da idade.
+- Geração automática de códigos.
+- Consulta e listagem.
 
-### 🫧 3. Catálogo de serviços
+### 🫧 Catálogo de serviços
 
 - Consulta dos serviços disponíveis.
 - Visualização dos preços.
-- Utilização dos valores no registro de atendimentos.
 
-### 🩺 4. Registro de atendimentos
+### 🩷 Registro de atendimentos
 
-- Seleção de um animal previamente cadastrado.
+- Seleção de animais cadastrados.
 - Registro dos serviços realizados.
-- Cálculo automático do valor do atendimento.
-- Associação dos atendimentos aos respectivos animais.
+- Cálculo automático do valor.
 
-### 📊 5. Relatórios
+### 🍒 Relatórios
 
-- Atendimentos realizados durante a sessão.
-- Serviços registrados por animal.
-- Subtotal dos atendimentos de cada animal.
-- Valor total arrecadado durante a sessão.
+- Atendimentos realizados na sessão.
+- Serviços por animal.
+- Subtotais e valor total arrecadado.
 
-### 🔎 6. Sistema de consultas
+## 🎂 Catálogo de serviços e preços
 
-- Busca de tutores pelo código.
-- Busca de animais pelo código.
-- Verificação da existência dos registros antes de realizar operações.
-
-## 🎀 Catálogo de serviços e preços
-
-| Serviço | Valor |
-|:--|--:|
-| 🫧 Banho | R$ 35,00 |
-| ✂️ Tosa | R$ 45,00 |
+| Serviço                 |    Valor |
+| :---------------------- | -------: |
+| 🫧 Banho                | R$ 35,00 |
+| ✂️ Tosa                 | R$ 45,00 |
 | 🩺 Consulta veterinária | R$ 80,00 |
-| 💉 Vacinação | R$ 60,00 |
+| 💉 Vacinação            | R$ 60,00 |
 
-*Os valores são fictícios e utilizados exclusivamente para simulação acadêmica.*
+*Valores fictícios para simulação acadêmica.*
 
 ## 💻 Tecnologias e conceitos utilizados
 
-### Tecnologias
-
-| Tecnologia | Aplicação |
-|:--|:--|
-| Linguagem C | Desenvolvimento da aplicação |
-| GCC | Compilação do código-fonte |
+| Tecnologia         | Aplicação                   |
+| :----------------- | :-------------------------- |
+| C                  | Linguagem de programação    |
+| GCC                | Compilação                  |
 | Visual Studio Code | Ambiente de desenvolvimento |
-| Git e GitHub | Versionamento e hospedagem |
+| Git e GitHub       | Versionamento               |
 
-### Conceitos de programação
+**Conceitos aplicados:**
 
-- **Structs (`typedef struct`):** organização dos dados de tutores, animais e atendimentos.
-- **Vetores:** armazenamento dos registros durante a execução.
-- **Strings (`char[]`):** manipulação de nomes, telefones e outras informações.
-- **Funções:** divisão do código em operações específicas.
-- **Condicionais (`if/else`):** validação de informações e aplicação de regras.
-- **Estrutura `switch`:** gerenciamento das opções do menu.
-- **Laços (`for` e `do...while`):** repetição de operações e navegação pelo sistema.
-- **Biblioteca `string.h`:** manipulação e comparação de strings.
-- **Biblioteca `stdio.h`:** entrada e saída de informações.
+- `typedef struct`
+- Vetores e strings.
+- Funções.
+- `if/else` e `switch`.
+- Laços `for` e `do...while`.
+- Bibliotecas `stdio.h` e `string.h`.
 
-## 📋 Menu principal
+## 🍰 Menu principal
 
 ```text
 ╔════════════════════════════════╗
-║           CHERRY PET           ║
+║       HELLO CHERRY PET         ║
 ╠════════════════════════════════╣
 ║  1 - Cadastrar tutor           ║
 ║  2 - Cadastrar animal          ║
@@ -135,25 +111,23 @@ Além de atender às necessidades propostas para o projeto acadêmico, o Cherry 
 ╚════════════════════════════════╝
 ```
 
-O menu principal permite acessar as funcionalidades por meio de uma interface simples e interativa no terminal.
-
 ## ⚙️ Regras de negócio
 
-1. Cada tutor recebe um código único gerado automaticamente.
-2. Cada animal também recebe um código único.
-3. Um animal somente pode ser cadastrado quando seu tutor responsável já estiver registrado.
-4. Um atendimento somente pode ser realizado para um animal previamente cadastrado.
-5. Os valores dos serviços são definidos pelo catálogo do sistema.
-6. Os relatórios consideram os atendimentos realizados durante a sessão atual.
-7. O sistema possui capacidade máxima de 10 tutores, 10 animais e 10 atendimentos por sessão.
-8. Informações inválidas são identificadas e recebem mensagens de orientação ao usuário.
+1. Cada tutor recebe um código único.
+2. Cada animal recebe um código único.
+3. Um animal só pode ser cadastrado se seu tutor já existir.
+4. Um atendimento só pode ser realizado para um animal cadastrado.
+5. Os preços são definidos pelo catálogo.
+6. Os relatórios consideram os atendimentos da sessão atual.
+7. A capacidade máxima é de 10 tutores, 10 animais e 10 atendimentos por sessão.
+8. Informações inválidas recebem mensagens de orientação.
 
 ## 🚀 Como executar o projeto
 
 ### Pré-requisitos
 
 - GCC instalado.
-- Visual Studio Code ou outro editor de código.
+- Visual Studio Code ou outro editor.
 - Terminal ou prompt de comando.
 
 ### 1. Clone o repositório
@@ -171,7 +145,7 @@ cd petControl/projeto_petcontrol
 ### 3. Compile o programa
 
 ```bash
-gcc petshop.c -o cherry_pet
+gcc petshop.c -o hello_cherry_pet
 ```
 
 ### 4. Execute o programa
@@ -179,19 +153,19 @@ gcc petshop.c -o cherry_pet
 **Windows:**
 
 ```bash
-.\cherry_pet.exe
+.\hello_cherry_pet.exe
 ```
 
 **Linux ou macOS:**
 
 ```bash
-./cherry_pet
+./hello_cherry_pet
 ```
 
 ## 📁 Estrutura do projeto
 
 ```text
-cherry-pet/
+hello-cherry-pet/
 │
 ├── projeto_petcontrol/
 │   └── petshop.c
@@ -201,83 +175,68 @@ cherry-pet/
 └── README.md
 ```
 
-| Arquivo | Descrição |
-|:--|:--|
-| `petshop.c` | Código-fonte principal do sistema. |
-| `.gitignore` | Define arquivos e pastas ignorados pelo Git. |
-| `README.md` | Documentação e apresentação do projeto. |
-
 ## 📖 Documentação complementar
 
-Para apresentar o funcionamento interno do Cherry Pet, foi elaborada uma documentação em PDF com explicações detalhadas sobre a implementação do sistema.
+A documentação apresenta explicações sobre a implementação e o funcionamento do sistema.
 
-### 📄 DocSPetFriend.pdf
-
-[➜ Acessar documentação completa do Cherry Pet](https://github.com/user-attachments/files/34291221/DocSPetFriend.pdf)
-
-O documento apresenta:
-
-- Visão geral e divisão do código em sete blocos.
-- Bibliotecas utilizadas e constante `MAX`.
-- Estruturas `Tutor`, `Animal` e `Atendimento`, com explicação de seus campos.
-- Variáveis globais, vetores e contadores.
-- Funções auxiliares explicadas detalhadamente.
-- Utilização de `fgets` e comparação com `scanf`.
-- Funcionamento das funções de cadastro e consulta.
-- Explicação do menu principal e das opções disponíveis.
-- Relação entre tutores, animais e atendimentos.
-- Limitações conhecidas da aplicação.
+[🍓 Acessar documentação completa do projeto (PDF)](https://github.com/user-attachments/files/34291221/DocSPetFriend.pdf)
 
 ## ⚠️ Limitações conhecidas
 
-Apesar de atender aos objetivos propostos, o sistema possui algumas limitações:
-
-- **Armazenamento temporário:** os dados são mantidos apenas na memória RAM durante a execução. Ao fechar o programa, os registros são perdidos.
-- **Capacidade limitada:** o sistema permite até 10 registros de cada tipo, conforme a constante `MAX`.
-- **Sem exclusão de registros:** não existe funcionalidade para excluir tutores, animais ou atendimentos.
-- **Interface em terminal:** a aplicação não possui interface gráfica ou versão web.
-- **Sem banco de dados:** as informações não são integradas a um banco de dados externo.
-- **Sem autenticação:** o sistema não possui controle de acesso por usuários e senhas.
+- Os dados ficam armazenados somente na memória RAM durante a execução.
+- Os registros são perdidos ao fechar o programa.
+- A capacidade é limitada a 10 registros de cada tipo.
+- Não existe funcionalidade para excluir registros.
+- A aplicação funciona somente no terminal.
+- Não utiliza banco de dados externo.
+- Não possui autenticação de usuários.
 
 ## 👩🏻‍💻 Integrantes
 
-Projeto desenvolvido em grupo por:
-
-- Kerolainy 
-- Raissa 
+- Kerolainy Oliveira
+- Raissa dos Santos de Oliveira
 - Gabriela
 - Thalyta
 
-**Instituição:** Universidade Católica de Brasília (UCB)  
-**Disciplina:** Lógica de Programação em C  
-**Projeto:** Cherry Pet
+**Instituição:** Universidade Católica de Brasília (UCB)
+**Disciplina:** Lógica de Programação em C
+
+## 🎀 Identidade visual
+
+A identidade visual do Hello Cherry Pet foi inspirada no universo Hello Kitty & Friends.
+
+A proposta combina delicadeza, criatividade e fofura, com uma paleta de verde menta, rosa, cereja e branco.
+
+### Paleta de cores
+
+\<p align="center">
+&#x20; \<img src="[https://img.shields.io/badge/BDF2D4-Menta-BDF2D4?style=flat-square](https://img.shields.io/badge/BDF2D4-Menta-BDF2D4?style=flat-square)" />
+&#x20; \<img src="[https://img.shields.io/badge/E94B78-Cereja-E94B78?style=flat-square](https://img.shields.io/badge/E94B78-Cereja-E94B78?style=flat-square)" />
+&#x20; \<img src="[https://img.shields.io/badge/F7A8C4-Rosa-F7A8C4?style=flat-square](https://img.shields.io/badge/F7A8C4-Rosa-F7A8C4?style=flat-square)" />
+&#x20; \<img src="[https://img.shields.io/badge/FFF0F5-Rosa%20claro-FFF0F5?style=flat-square](https://img.shields.io/badge/FFF0F5-Rosa%20claro-FFF0F5?style=flat-square)" />
+&#x20; \<img src="[https://img.shields.io/badge/D96C9F-Pink-D96C9F?style=flat-square](https://img.shields.io/badge/D96C9F-Pink-D96C9F?style=flat-square)" />
+\</p>
+
+\<p align="center">
+&#x20; \<sub>#BDF2D4 • #E94B78 • #F7A8C4 • #FFF0F5 • #D96C9F\</sub>
+\</p>
 
 ## 🎓 Aviso de uso acadêmico
 
 Este projeto foi desenvolvido exclusivamente para fins educacionais, como parte da avaliação final da disciplina de Lógica de Programação em C da Universidade Católica de Brasília (UCB).
 
-O Cherry Pet não possui finalidade comercial, não é vendido e não representa um produto destinado à utilização profissional.
-
-## 🎀 Créditos e identidade visual
-
-A identidade visual e a temática do projeto foram inspiradas na estética *kawaii*, com referências visuais a Hello Kitty (Sanrio) e Line Friends (LINE).
-
-O projeto não possui vínculo, parceria, patrocínio ou associação oficial com essas empresas. Todos os nomes e marcas mencionados pertencem aos seus respectivos proprietários.
+Os personagens e as marcas mencionados pertencem aos seus respectivos proprietários. O projeto não possui vínculo, parceria, patrocínio ou associação oficial com a Sanrio.
 
 ---
 
-<p align="center">
-  <img src="https://img.shields.io/badge/401923-Vinho-401923?style=flat-square" />
-  <img src="https://img.shields.io/badge/8C3E5B-Rosa%20escuro-8C3E5B?style=flat-square" />
-  <img src="https://img.shields.io/badge/D97197-Rosa%20antigo-D97197?style=flat-square" />
-  <img src="https://img.shields.io/badge/D96C9F-Rosa%20vibrante-D96C9F?style=flat-square" />
-  <img src="https://img.shields.io/badge/F28DC4-Rosa%20pastel-F28DC4?style=flat-square" />
-</p>
+\<p align="center">
+&#x20; \<img src="[https://img.shields.io/badge/🍒\_HELLO_CHERRY_PET-E94B78?style=for-the-badge](https://img.shields.io/badge/🍒_HELLO_CHERRY_PET-E94B78?style=for-the-badge)" />
+\</p>
 
-<p align="center">
-  <b>Feito com ♡, dedicação e muito código em C!</b>
-</p>
+\<p align="center">
+&#x20; \<b>Feito com ♡, dedicação e muito código em C!\</b>
+\</p>
 
-<p align="center">
-  <sub>Cherry Pet © Projeto acadêmico — UCB</sub>
-</p>
+\<p align="center">
+&#x20; 🎀 Hello Cherry Pet 🍓
+\</p>
