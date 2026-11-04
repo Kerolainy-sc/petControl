@@ -3,9 +3,9 @@
 ### Sistema de gerenciamento para Pet Shop e Clínica Veterinária
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Linguagem-C-FFB6C1?style=for-the-badge&logo=c&logoColor=49313D" />
-  <img src="https://img.shields.io/badge/Compilador-GCC-FF69B4?style=for-the-badge&logo=gnu&logoColor=ffffff" />
-  <img src="https://img.shields.io/badge/Projeto-Acadêmico-DB7093?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Linguagem-C-ffffff?style=for-the-badge&labelColor=ffd1dc&logo=c&logoColor=49313D&color=ffffff" />
+  <img src="https://img.shields.io/badge/Compilador-GCC-ffffff?style=for-the-badge&labelColor=ffd1dc&logo=gnu&logoColor=49313D&color=ffffff" />
+  <img src="https://img.shields.io/badge/Projeto-Acadêmico-ffffff?style=for-the-badge&labelColor=ffd1dc&color=ffffff" />
 </p>
 
 <p align="center">
