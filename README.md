@@ -1,4 +1,4 @@
-# 🐾 Cherry Pets
+# 🍒 Cherry Pet
 ### Sistema de gerenciamento para Pet Shop e Clínica Veterinária
 
 <p align="center">
@@ -16,13 +16,13 @@
 
 ## 🌷 Sobre o projeto
 
-O **PetFriend** é um sistema de gerenciamento desenvolvido em linguagem C, com o objetivo de simular o funcionamento de um pet shop integrado a uma clínica veterinária.
+O **Cherry Pet** é um sistema de gerenciamento desenvolvido em linguagem C, com o objetivo de simular o funcionamento de um pet shop integrado a uma clínica veterinária.
 
 O projeto foi desenvolvido como parte da avaliação final da disciplina de **Lógica de Programação em C**, da Universidade Católica de Brasília (UCB).
 
 A aplicação funciona diretamente no terminal e permite organizar informações de tutores e seus animais, consultar serviços disponíveis, registrar atendimentos e acompanhar os valores gerados durante uma sessão de utilização.
 
-Além de atender às necessidades propostas para o projeto acadêmico, o PetFriend foi desenvolvido com foco na aplicação prática dos principais conceitos de lógica de programação e da linguagem C.
+Além de atender às necessidades propostas para o projeto acadêmico, o Cherry Pet foi desenvolvido com foco na aplicação prática dos principais conceitos de lógica de programação e da linguagem C.
 
 <p align="center">
   <b>Projeto acadêmico • Sem fins comerciais</b>
@@ -120,7 +120,7 @@ Além de atender às necessidades propostas para o projeto acadêmico, o PetFrie
 
 ```text
 ╔════════════════════════════════╗
-║           PETFRIEND            ║
+║           CHERRY PET           ║
 ╠════════════════════════════════╣
 ║  1 - Cadastrar tutor           ║
 ║  2 - Cadastrar animal          ║
@@ -171,7 +171,7 @@ cd petControl/projeto_petcontrol
 ### 3. Compile o programa
 
 ```bash
-gcc petshop.c -o petshop
+gcc petshop.c -o cherry_pet
 ```
 
 ### 4. Execute o programa
@@ -179,19 +179,19 @@ gcc petshop.c -o petshop
 **Windows:**
 
 ```bash
-.\petshop.exe
+.\cherry_pet.exe
 ```
 
 **Linux ou macOS:**
 
 ```bash
-./petshop
+./cherry_pet
 ```
 
 ## 📁 Estrutura do projeto
 
 ```text
-petControl/
+cherry-pet/
 │
 ├── projeto_petcontrol/
 │   └── petshop.c
@@ -209,11 +209,11 @@ petControl/
 
 ## 📖 Documentação complementar
 
-Para apresentar o funcionamento interno do PetFriend, foi elaborada uma documentação em PDF com explicações detalhadas sobre a implementação do sistema.
+Para apresentar o funcionamento interno do Cherry Pet, foi elaborada uma documentação em PDF com explicações detalhadas sobre a implementação do sistema.
 
 ### 📄 DocSPetFriend.pdf
 
-[➜ Acessar documentação completa do PetFriend](https://github.com/user-attachments/files/34291221/DocSPetFriend.pdf)
+[➜ Acessar documentação completa do Cherry Pet](https://github.com/user-attachments/files/34291221/DocSPetFriend.pdf)
 
 O documento apresenta:
 
@@ -250,13 +250,13 @@ Projeto desenvolvido em grupo por:
 
 **Instituição:** Universidade Católica de Brasília (UCB)  
 **Disciplina:** Lógica de Programação em C  
-**Projeto:** PetFriend
+**Projeto:** Cherry Pet
 
 ## 🎓 Aviso de uso acadêmico
 
 Este projeto foi desenvolvido exclusivamente para fins educacionais, como parte da avaliação final da disciplina de Lógica de Programação em C da Universidade Católica de Brasília (UCB).
 
-O PetFriend não possui finalidade comercial, não é vendido e não representa um produto destinado à utilização profissional.
+O Cherry Pet não possui finalidade comercial, não é vendido e não representa um produto destinado à utilização profissional.
 
 ## 🎀 Créditos e identidade visual
 
@@ -279,5 +279,5 @@ O projeto não possui vínculo, parceria, patrocínio ou associação oficial co
 </p>
 
 <p align="center">
-  <sub>PetFriend © Projeto acadêmico — UCB</sub>
+  <sub>Cherry Pet © Projeto acadêmico — UCB</sub>
 </p>
