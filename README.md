@@ -2,15 +2,17 @@
 
 ### Sistema de gerenciamento para Pet Shop e Clínica Veterinária
 
-\<p align="center">
-&#x20; \<img src="[https://img.shields.io/badge/Linguagem-C-BDF2D4?style=for-the-badge&logo=c&logoColor=49313D](https://img.shields.io/badge/Linguagem-C-BDF2D4?style=for-the-badge\&logo=c\&logoColor=49313D)" />
-&#x20; \<img src="[https://img.shields.io/badge/Compilador-GCC-E94B78?style=for-the-badge&logo=gnu&logoColor=ffffff](https://img.shields.io/badge/Compilador-GCC-E94B78?style=for-the-badge\&logo=gnu\&logoColor=ffffff)" />
-&#x20; \<img src="[https://img.shields.io/badge/Projeto-Acadêmico-F7A8C4?style=for-the-badge](https://img.shields.io/badge/Projeto-Acadêmico-F7A8C4?style=for-the-badge)" />
-\</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Linguagem-C-BDF2D4?style=for-the-badge&logo=c&logoColor=49313D" />
+  <img src="https://img.shields.io/badge/Compilador-GCC-E94B78?style=for-the-badge&logo=gnu&logoColor=ffffff" />
+  <img src="https://img.shields.io/badge/Projeto-Acadêmico-F7A8C4?style=for-the-badge" />
+</p>
 
-\<p align="center">
-&#x20; \<b>♡ Cuidando dos detalhes, organizando cada atendimento. ♡\</b>
-\</p>
+<p align="center">
+  <b>♡ Cuidando dos detalhes, organizando cada atendimento. ♡</b>
+</p>
+
+---
 
 ## 🌷 Sobre o projeto
 
@@ -65,23 +67,23 @@ A aplicação funciona diretamente no terminal e permite organizar informações
 
 ## 🎂 Catálogo de serviços e preços
 
-| Serviço                 |    Valor |
-| :---------------------- | -------: |
-| 🫧 Banho                | R$ 35,00 |
-| ✂️ Tosa                 | R$ 45,00 |
+| Serviço | Valor |
+|:--|--:|
+| 🫧 Banho | R$ 35,00 |
+| ✂️ Tosa | R$ 45,00 |
 | 🩺 Consulta veterinária | R$ 80,00 |
-| 💉 Vacinação            | R$ 60,00 |
+| 💉 Vacinação | R$ 60,00 |
 
 *Valores fictícios para simulação acadêmica.*
 
 ## 💻 Tecnologias e conceitos utilizados
 
-| Tecnologia         | Aplicação                   |
-| :----------------- | :-------------------------- |
-| C                  | Linguagem de programação    |
-| GCC                | Compilação                  |
+| Tecnologia | Aplicação |
+|:--|:--|
+| C | Linguagem de programação |
+| GCC | Compilação |
 | Visual Studio Code | Ambiente de desenvolvimento |
-| Git e GitHub       | Versionamento               |
+| Git e GitHub | Versionamento |
 
 **Conceitos aplicados:**
 
@@ -185,58 +187,4 @@ A documentação apresenta explicações sobre a implementação e o funcionamen
 
 - Os dados ficam armazenados somente na memória RAM durante a execução.
 - Os registros são perdidos ao fechar o programa.
-- A capacidade é limitada a 10 registros de cada tipo.
-- Não existe funcionalidade para excluir registros.
-- A aplicação funciona somente no terminal.
-- Não utiliza banco de dados externo.
-- Não possui autenticação de usuários.
-
-## 👩🏻‍💻 Integrantes
-
-- Kerolainy Oliveira
-- Raissa dos Santos de Oliveira
-- Gabriela
-- Thalyta
-
-**Instituição:** Universidade Católica de Brasília (UCB)
-**Disciplina:** Lógica de Programação em C
-
-## 🎀 Identidade visual
-
-A identidade visual do Hello Cherry Pet foi inspirada no universo Hello Kitty & Friends.
-
-A proposta combina delicadeza, criatividade e fofura, com uma paleta de verde menta, rosa, cereja e branco.
-
-### Paleta de cores
-
-\<p align="center">
-&#x20; \<img src="[https://img.shields.io/badge/BDF2D4-Menta-BDF2D4?style=flat-square](https://img.shields.io/badge/BDF2D4-Menta-BDF2D4?style=flat-square)" />
-&#x20; \<img src="[https://img.shields.io/badge/E94B78-Cereja-E94B78?style=flat-square](https://img.shields.io/badge/E94B78-Cereja-E94B78?style=flat-square)" />
-&#x20; \<img src="[https://img.shields.io/badge/F7A8C4-Rosa-F7A8C4?style=flat-square](https://img.shields.io/badge/F7A8C4-Rosa-F7A8C4?style=flat-square)" />
-&#x20; \<img src="[https://img.shields.io/badge/FFF0F5-Rosa%20claro-FFF0F5?style=flat-square](https://img.shields.io/badge/FFF0F5-Rosa%20claro-FFF0F5?style=flat-square)" />
-&#x20; \<img src="[https://img.shields.io/badge/D96C9F-Pink-D96C9F?style=flat-square](https://img.shields.io/badge/D96C9F-Pink-D96C9F?style=flat-square)" />
-\</p>
-
-\<p align="center">
-&#x20; \<sub>#BDF2D4 • #E94B78 • #F7A8C4 • #FFF0F5 • #D96C9F\</sub>
-\</p>
-
-## 🎓 Aviso de uso acadêmico
-
-Este projeto foi desenvolvido exclusivamente para fins educacionais, como parte da avaliação final da disciplina de Lógica de Programação em C da Universidade Católica de Brasília (UCB).
-
-Os personagens e as marcas mencionados pertencem aos seus respectivos proprietários. O projeto não possui vínculo, parceria, patrocínio ou associação oficial com a Sanrio.
-
----
-
-\<p align="center">
-&#x20; \<img src="[https://img.shields.io/badge/🍒\_HELLO_CHERRY_PET-E94B78?style=for-the-badge](https://img.shields.io/badge/🍒_HELLO_CHERRY_PET-E94B78?style=for-the-badge)" />
-\</p>
-
-\<p align="center">
-&#x20; \<b>Feito com ♡, dedicação e muito código em C!\</b>
-\</p>
-
-\<p align="center">
-&#x20; 🎀 Hello Cherry Pet 🍓
-\</p>
+- A capacidade é limitada a
