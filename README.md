@@ -1,15 +1,11 @@
-<div align="center">
-
-# <img src="https://usagif.com/wp-content/uploads/gify/cinnamoroll-wrapping-ears-cute-usagif.gif" width="60" align="center" /> Hello Cherry Pet
+# 🍒 Hello Cherry Pet
 
 ### Sistema de gerenciamento para Pet Shop e Clínica Veterinária
 
-</div>
-
 <p align="center">
-  <img src="https://img.shields.io/badge/Linguagem-C-ffffff?style=for-the-badge&labelColor=B7E3FF&logo=c&logoColor=333333&color=ffffff" />
-  <img src="https://img.shields.io/badge/Compilador-GCC-ffffff?style=for-the-badge&labelColor=B7E3FF&logo=gnu&logoColor=333333&color=ffffff" />
-  <img src="https://img.shields.io/badge/Projeto-Acadêmico-ffffff?style=for-the-badge&labelColor=B7E3FF&color=ffffff" />
+  <img src="https://img.shields.io/badge/Linguagem-C-BDF2D4?style=for-the-badge&logo=c&logoColor=49313D" />
+  <img src="https://img.shields.io/badge/Compilador-GCC-E94B78?style=for-the-badge&logo=gnu&logoColor=ffffff" />
+  <img src="https://img.shields.io/badge/Projeto-Acadêmico-F7A8C4?style=for-the-badge" />
 </p>
 
 <p align="center">
@@ -102,11 +98,11 @@ A aplicação funciona diretamente no terminal e permite organizar informações
 
 ```text
 ╔════════════════════════════════╗
-║        HELLO CHERRY PET        ║
+║       HELLO CHERRY PET         ║
 ╠════════════════════════════════╣
 ║  1 - Cadastrar tutor           ║
 ║  2 - Cadastrar animal          ║
-║  3 - Listar cadastros          ║
+║  3 - Listar cadastros           ║
 ║  4 - Buscar tutor ou animal    ║
 ║  5 - Registrar atendimento     ║
 ║  6 - Alterar tutor             ║
@@ -115,3 +111,80 @@ A aplicação funciona diretamente no terminal e permite organizar informações
 ║                                ║
 ║  0 - Sair                      ║
 ╚════════════════════════════════╝
+```
+
+## ⚙️ Regras de negócio
+
+1. Cada tutor recebe um código único.
+2. Cada animal recebe um código único.
+3. Um animal só pode ser cadastrado se seu tutor já existir.
+4. Um atendimento só pode ser realizado para um animal cadastrado.
+5. Os preços são definidos pelo catálogo.
+6. Os relatórios consideram os atendimentos da sessão atual.
+7. A capacidade máxima é de 10 tutores, 10 animais e 10 atendimentos por sessão.
+8. Informações inválidas recebem mensagens de orientação.
+
+## 🚀 Como executar o projeto
+
+### Pré-requisitos
+
+- GCC instalado.
+- Visual Studio Code ou outro editor.
+- Terminal ou prompt de comando.
+
+### 1. Clone o repositório
+
+```bash
+git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
+```
+
+### 2. Acesse a pasta do código
+
+```bash
+cd petControl/projeto_petcontrol
+```
+
+### 3. Compile o programa
+
+```bash
+gcc petshop.c -o hello_cherry_pet
+```
+
+### 4. Execute o programa
+
+**Windows:**
+
+```bash
+.\hello_cherry_pet.exe
+```
+
+**Linux ou macOS:**
+
+```bash
+./hello_cherry_pet
+```
+
+## 📁 Estrutura do projeto
+
+```text
+hello-cherry-pet/
+│
+├── projeto_petcontrol/
+│   └── petshop.c
+│
+├── .gitignore
+│
+└── README.md
+```
+
+## 📖 Documentação complementar
+
+A documentação apresenta explicações sobre a implementação e o funcionamento do sistema.
+
+[🍓 Acessar documentação completa do projeto (PDF)](https://github.com/user-attachments/files/34291221/DocSPetFriend.pdf)
+
+## ⚠️ Limitações conhecidas
+
+- Os dados ficam armazenados somente na memória RAM durante a execução.
+- Os registros são perdidos ao fechar o programa.
+- A capacidade é limitada a
